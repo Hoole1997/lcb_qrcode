@@ -6,6 +6,7 @@ import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
 import com.android.common.bill.ads.renderer.AdmobNativeAdRenderer
+import com.android.common.bill.ui.NativeAdStyle
 import com.google.android.gms.ads.nativead.NativeAd
 import com.google.android.gms.ads.nativead.NativeAdView
 import com.lcb.qrcode.R
@@ -15,9 +16,9 @@ import com.lcb.qrcode.R
  */
 class DefaultAdmobNativeAdRenderer : AdmobNativeAdRenderer {
 
-    override fun createLayout(context: Context): NativeAdView {
+    override fun createLayout(context: Context, style: NativeAdStyle): NativeAdView {
         return LayoutInflater.from(context)
-            .inflate(NativeAdLayoutResolver.admob(context), null) as NativeAdView
+            .inflate(style.layoutResId, null) as NativeAdView
     }
 
     override fun bindData(adView: NativeAdView, nativeAd: NativeAd) {

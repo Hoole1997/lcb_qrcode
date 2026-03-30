@@ -23,8 +23,6 @@ fun FragmentActivity.loadNative(container: ViewGroup,
                 return@launch
             }
 
-            NativeAdStyleRegistry.update(container.context, styleType)
-
             val success = AdShowExt.showNativeAdInContainer(
                 context = container.context,
                 container = container,

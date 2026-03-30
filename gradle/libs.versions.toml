@@ -45,7 +45,7 @@ gson = { group = "com.google.code.gson", name = "gson", version.ref = "gson" }
 kotlinx-coroutines-android = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-android", version.ref = "coroutines" }
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 remax-core = { group = "com.github.toukaremax", name = "core", version = "1.0.9" }
-remax-bill = { group = "com.github.toukaremax", name = "bill", version = "useOldAdmob_removeMax_1.4" }
+remax-bill = { group = "com.github.toukaremax", name = "bill", version = "useOldAdmob_removeMax_1.5" }
 room-compiler = { group = "androidx.room", name = "room-compiler", version.ref = "room" }
 room-ktx = { group = "androidx.room", name = "room-ktx", version.ref = "room" }
 room-runtime = { group = "androidx.room", name = "room-runtime", version.ref = "room" }

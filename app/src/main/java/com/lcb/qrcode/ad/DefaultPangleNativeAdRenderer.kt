@@ -8,6 +8,7 @@ import android.widget.FrameLayout
 import android.widget.ImageView
 import android.widget.TextView
 import com.android.common.bill.ads.renderer.PangleNativeAdRenderer
+import com.android.common.bill.ui.pangle.PangleNativeAdStyle
 import com.bumptech.glide.Glide
 import com.bytedance.sdk.openadsdk.api.nativeAd.PAGNativeAdData
 import com.bytedance.sdk.openadsdk.api.nativeAd.PAGViewBinder
@@ -18,9 +19,9 @@ import com.lcb.qrcode.R
  */
 class DefaultPangleNativeAdRenderer : PangleNativeAdRenderer {
 
-    override fun createLayout(context: Context): ViewGroup {
+    override fun createLayout(context: Context, style: PangleNativeAdStyle): ViewGroup {
         return LayoutInflater.from(context)
-            .inflate(NativeAdLayoutResolver.pangle(context), null) as ViewGroup
+            .inflate(style.layoutResId, null) as ViewGroup
     }
 
     override fun bindData(context: Context, adView: ViewGroup, nativeAdData: PAGNativeAdData) {

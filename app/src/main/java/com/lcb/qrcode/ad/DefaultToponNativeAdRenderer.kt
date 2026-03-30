@@ -8,6 +8,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import com.android.common.bill.ads.renderer.ToponNativeAdRenderer
 import com.bumptech.glide.Glide
+import com.android.common.bill.ui.topon.ToponNativeAdStyle
 import com.lcb.qrcode.R
 import com.thinkup.nativead.api.TUNativeMaterial
 import com.thinkup.nativead.api.TUNativePrepareInfo
@@ -17,9 +18,9 @@ import com.thinkup.nativead.api.TUNativePrepareInfo
  */
 class DefaultToponNativeAdRenderer : ToponNativeAdRenderer {
 
-    override fun createLayout(context: Context): ViewGroup {
+    override fun createLayout(context: Context, style: ToponNativeAdStyle): ViewGroup {
         return LayoutInflater.from(context)
-            .inflate(NativeAdLayoutResolver.topon(context), null) as ViewGroup
+            .inflate(style.layoutResId, null) as ViewGroup
     }
 
     override fun bindData(adView: ViewGroup, material: TUNativeMaterial) {
