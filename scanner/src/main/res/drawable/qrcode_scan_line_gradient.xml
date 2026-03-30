@@ -4,15 +4,15 @@
     <item android:bottom="6dp">
         <shape android:shape="rectangle">
             <gradient
-                android:startColor="#00FB4C46"
-                android:endColor="#40FB4C46"
+                android:startColor="#00F7BD29"
+                android:endColor="#66F7BD29"
                 android:angle="270" />
         </shape>
     </item>
     <!-- 底部6dp红色实线 -->
     <item android:gravity="bottom" android:height="6dp">
         <shape android:shape="rectangle">
-            <solid android:color="#FB4C46" />
+            <solid android:color="@color/qrcode_primary" />
         </shape>
     </item>
 </layer-list>

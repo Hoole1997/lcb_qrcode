@@ -88,7 +88,7 @@
             android:layout_height="24dp"
             android:src="@drawable/qrcode_ic_check"
             android:visibility="gone"
-            app:tint="#2B85FF" />
+            app:tint="@color/qrcode_primary" />
 
     </LinearLayout>
 

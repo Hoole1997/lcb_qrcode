@@ -1,4 +1,4 @@
-package com.touka.lcb.qrcode
+package com.lcb.qrcode
 
 import android.app.Application
 import android.content.Context
@@ -9,9 +9,6 @@ import com.android.common.bill.BillConfig.adLoadingDialogRenderer
 import com.android.common.bill.BillConfig.admob
 import com.android.common.bill.BillConfig.admobFullScreenNativeRenderer
 import com.android.common.bill.BillConfig.admobNativeRenderer
-import com.android.common.bill.BillConfig.max
-import com.android.common.bill.BillConfig.maxFullScreenNativeRenderer
-import com.android.common.bill.BillConfig.maxNativeRenderer
 import com.android.common.bill.BillConfig.pangle
 import com.android.common.bill.BillConfig.pangleFullScreenNativeRenderer
 import com.android.common.bill.BillConfig.pangleNativeRenderer
@@ -21,18 +18,15 @@ import com.android.common.bill.BillConfig.toponNativeRenderer
 import com.android.common.bill.ads.bidding.AppOpenBiddingInitializer
 import com.android.common.bill.ads.log.AdLogger
 import com.android.common.bill.ui.NativeAdStyle
-import com.android.common.bill.ui.max.MaxNativeAdStyle
 import com.android.common.bill.ui.pangle.PangleNativeAdStyle
 import com.android.common.bill.ui.topon.ToponNativeAdStyle
-import com.touka.lcb.qrcode.ad.DefaultAdLoadingDialogRenderer
-import com.touka.lcb.qrcode.ad.DefaultAdmobFullScreenNativeAdRenderer
-import com.touka.lcb.qrcode.ad.DefaultAdmobNativeAdRenderer
-import com.touka.lcb.qrcode.ad.DefaultMaxFullScreenNativeAdRenderer
-import com.touka.lcb.qrcode.ad.DefaultMaxNativeAdRenderer
-import com.touka.lcb.qrcode.ad.DefaultPangleFullScreenNativeAdRenderer
-import com.touka.lcb.qrcode.ad.DefaultPangleNativeAdRenderer
-import com.touka.lcb.qrcode.ad.DefaultToponFullScreenNativeAdRenderer
-import com.touka.lcb.qrcode.ad.DefaultToponNativeAdRenderer
+import com.lcb.qrcode.ad.DefaultAdLoadingDialogRenderer
+import com.lcb.qrcode.ad.DefaultAdmobFullScreenNativeAdRenderer
+import com.lcb.qrcode.ad.DefaultAdmobNativeAdRenderer
+import com.lcb.qrcode.ad.DefaultPangleFullScreenNativeAdRenderer
+import com.lcb.qrcode.ad.DefaultPangleNativeAdRenderer
+import com.lcb.qrcode.ad.DefaultToponFullScreenNativeAdRenderer
+import com.lcb.qrcode.ad.DefaultToponNativeAdRenderer
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob
@@ -67,7 +61,7 @@ class LcbQrCodeApp : Application() {
     private fun initAd() {
         appScope.launch {
             runCatching {
-                AppOpenBiddingInitializer.initialize(this@LcbQrCodeApp, R.drawable.ic_home_qr) {
+                AppOpenBiddingInitializer.initialize(this@LcbQrCodeApp, R.mipmap.ic_home_qr) {
                     admob = BillConfig.AdmobConfig(
                         applicationId = BuildConfig.ADMOB_APPLICATION_ID,
                         splashId = BuildConfig.ADMOB_SPLASH_ID,
@@ -110,21 +104,8 @@ class LcbQrCodeApp : Application() {
                             146
                         ),
                     )
-                    max = BillConfig.MaxConfig(
-                        sdkKey = BuildConfig.MAX_SDK_KEY,
-                        splashId = BuildConfig.MAX_SPLASH_ID,
-                        bannerId = BuildConfig.MAX_BANNER_ID,
-                        interstitialId = BuildConfig.MAX_INTERSTITIAL_ID,
-                        nativeId = BuildConfig.MAX_NATIVE_ID,
-                        fullNativeId = BuildConfig.MAX_FULL_NATIVE_ID,
-                        rewardedId = BuildConfig.MAX_REWARDED_ID,
-                        nativeStyleStandard = MaxNativeAdStyle(R.layout.layout_max_native_ads),
-                        nativeStyleLarge = MaxNativeAdStyle(R.layout.layout_max_native_ads_large),
-                    )
                     admobNativeRenderer = DefaultAdmobNativeAdRenderer()
                     admobFullScreenNativeRenderer = DefaultAdmobFullScreenNativeAdRenderer()
-                    maxNativeRenderer = DefaultMaxNativeAdRenderer()
-                    maxFullScreenNativeRenderer = DefaultMaxFullScreenNativeAdRenderer()
                     pangleNativeRenderer = DefaultPangleNativeAdRenderer()
                     pangleFullScreenNativeRenderer = DefaultPangleFullScreenNativeAdRenderer()
                     toponNativeRenderer = DefaultToponNativeAdRenderer()

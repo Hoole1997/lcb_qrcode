@@ -228,7 +228,7 @@
         android:insetBottom="0dp"
         android:layout_marginHorizontal="20dp"
         android:layout_marginTop="20dp"
-        android:backgroundTint="#2B85FF"
+        android:backgroundTint="@color/qrcode_primary"
         android:text="@string/qrcode_result_search_web"
         android:textAllCaps="false"
         android:textColor="@android:color/white"
@@ -242,7 +242,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/buttonContainer"
-        app:strokeColor="#A4CBFF"
+        app:strokeColor="@color/qrcode_primary"
         app:strokeWidth="1dp" />
 
     <FrameLayout

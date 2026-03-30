@@ -2,7 +2,6 @@ package com.android.common.scanner.util
 
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.view.isVisible
 import androidx.fragment.app.FragmentActivity
 import androidx.lifecycle.lifecycleScope
 import com.android.common.bill.ads.AdResult
@@ -23,6 +22,8 @@ fun FragmentActivity.loadNative(container: ViewGroup,
                 call.invoke(false)
                 return@launch
             }
+
+            NativeAdStyleRegistry.update(container.context, styleType)
 
             val success = AdShowExt.showNativeAdInContainer(
                 context = container.context,

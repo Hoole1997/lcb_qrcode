@@ -129,8 +129,10 @@ class ScanHistoryActivity : BaseActivity<ActivityScanHistoryBinding, ScanHistory
         currentTab = tabIndex
 
         val tabs = listOf(binding.tabAll, binding.tabQrcode, binding.tabUrl, binding.tabDocument)
+        val selectedColor = getColor(R.color.qrcode_primary)
+        val unselectedColor = Color.parseColor("#666666")
         tabs.forEachIndexed { index, tab ->
-            tab.setTextColor(if (index == tabIndex) Color.parseColor("#4594FF") else Color.parseColor("#666666"))
+            tab.setTextColor(if (index == tabIndex) selectedColor else unselectedColor)
         }
 
         updateIndicatorPosition(tabs[tabIndex])

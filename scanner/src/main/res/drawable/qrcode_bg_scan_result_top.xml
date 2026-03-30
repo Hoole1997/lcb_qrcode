@@ -3,5 +3,5 @@
     <gradient
         android:angle="270"
         android:endColor="#FFFFFF"
-        android:startColor="#D2E5FE" />
+        android:startColor="@color/qrcode_primary_gradient" />
 </shape>

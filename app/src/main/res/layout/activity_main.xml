@@ -52,7 +52,7 @@
             android:contentDescription="@string/qrcode_settings_title"
             android:padding="8dp"
             android:scaleType="fitCenter"
-            android:src="@drawable/ic_home_settings" />
+            android:src="@mipmap/ic_home_settings" />
     </LinearLayout>
 
     <LinearLayout
@@ -100,7 +100,7 @@
                         android:scaleType="centerCrop"
                         android:scaleX="1.06"
                         android:scaleY="1.06"
-                        android:src="@drawable/ic_home_qr" />
+                        android:src="@mipmap/ic_home_qr" />
                 </FrameLayout>
 
                 <TextView
@@ -116,9 +116,14 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:autoSizeMaxTextSize="12sp"
+                    android:autoSizeMinTextSize="10sp"
+                    android:autoSizeStepGranularity="1sp"
+                    android:autoSizeTextType="uniform"
+                    android:ellipsize="end"
                     android:layout_marginTop="4dp"
                     android:gravity="center"
-                    android:maxLines="2"
+                    android:maxLines="1"
                     android:text="@string/qrcode_home_scanner_subtitle"
                     android:textColor="@color/home_text_secondary"
                     android:textSize="12sp" />
@@ -151,7 +156,7 @@
                         android:scaleType="centerCrop"
                         android:scaleX="1.06"
                         android:scaleY="1.06"
-                        android:src="@drawable/ic_home_barcode" />
+                        android:src="@mipmap/ic_home_barcode" />
                 </FrameLayout>
 
                 <TextView
@@ -167,9 +172,14 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:autoSizeMaxTextSize="12sp"
+                    android:autoSizeMinTextSize="10sp"
+                    android:autoSizeStepGranularity="1sp"
+                    android:autoSizeTextType="uniform"
+                    android:ellipsize="end"
                     android:layout_marginTop="4dp"
                     android:gravity="center"
-                    android:maxLines="2"
+                    android:maxLines="1"
                     android:text="@string/home_scan_barcode_subtitle"
                     android:textColor="@color/home_text_secondary"
                     android:textSize="12sp" />
@@ -210,7 +220,7 @@
                         android:scaleType="centerCrop"
                         android:scaleX="1.06"
                         android:scaleY="1.06"
-                        android:src="@drawable/ic_home_pdf" />
+                        android:src="@mipmap/ic_home_pdf" />
                 </FrameLayout>
 
                 <TextView
@@ -226,9 +236,14 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:autoSizeMaxTextSize="12sp"
+                    android:autoSizeMinTextSize="10sp"
+                    android:autoSizeStepGranularity="1sp"
+                    android:autoSizeTextType="uniform"
+                    android:ellipsize="end"
                     android:layout_marginTop="4dp"
                     android:gravity="center"
-                    android:maxLines="2"
+                    android:maxLines="1"
                     android:text="@string/home_scan_pdf_subtitle"
                     android:textColor="@color/home_text_secondary"
                     android:textSize="12sp" />
@@ -261,7 +276,7 @@
                         android:scaleType="centerCrop"
                         android:scaleX="1.06"
                         android:scaleY="1.06"
-                        android:src="@drawable/ic_home_history" />
+                        android:src="@mipmap/ic_home_history" />
                 </FrameLayout>
 
                 <TextView
@@ -277,9 +292,14 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:autoSizeMaxTextSize="12sp"
+                    android:autoSizeMinTextSize="10sp"
+                    android:autoSizeStepGranularity="1sp"
+                    android:autoSizeTextType="uniform"
+                    android:ellipsize="end"
                     android:layout_marginTop="4dp"
                     android:gravity="center"
-                    android:maxLines="2"
+                    android:maxLines="1"
                     android:text="@string/home_history_subtitle"
                     android:textColor="@color/home_text_secondary"
                     android:textSize="12sp" />
@@ -302,8 +322,6 @@
         android:layout_height="wrap_content"
         android:background="@color/home_ad_background"
         android:orientation="vertical"
-        android:paddingTop="8dp"
-        android:paddingBottom="8dp"
         android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -313,7 +331,6 @@
             android:id="@+id/nativeAdContainer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="16dp"
             android:visibility="gone" />
     </LinearLayout>
 

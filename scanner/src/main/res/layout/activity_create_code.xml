@@ -203,7 +203,7 @@
         android:layout_marginTop="24dp"
         android:fontFamily="sans-serif-medium"
         android:text="@string/qrcode_create_standard_qr_codes"
-        android:textColor="#2B85FF"
+        android:textColor="@color/qrcode_primary"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"

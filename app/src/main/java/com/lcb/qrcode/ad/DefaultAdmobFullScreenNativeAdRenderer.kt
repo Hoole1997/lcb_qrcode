@@ -1,4 +1,4 @@
-package com.touka.lcb.qrcode.ad
+package com.lcb.qrcode.ad
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -8,10 +8,10 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.lifecycle.LifecycleOwner
 import com.android.common.bill.ads.renderer.AdmobFullScreenNativeAdRenderer
-import com.touka.lcb.qrcode.R
-import com.google.android.libraries.ads.mobile.sdk.nativead.MediaView
-import com.google.android.libraries.ads.mobile.sdk.nativead.NativeAd
-import com.google.android.libraries.ads.mobile.sdk.nativead.NativeAdView
+import com.google.android.gms.ads.nativead.MediaView
+import com.google.android.gms.ads.nativead.NativeAd
+import com.google.android.gms.ads.nativead.NativeAdView
+import com.lcb.qrcode.R
 
 /**
  * Admob 全屏原生广告默认渲染器
@@ -53,12 +53,13 @@ class DefaultAdmobFullScreenNativeAdRenderer : AdmobFullScreenNativeAdRenderer {
         adView.bodyView = descView
         adView.callToActionView = ctaButton
         adView.iconView = iconView
+        adView.mediaView = mediaView
         adView.starRatingView = null
         adView.advertiserView = null
         adView.priceView = null
         adView.storeView = null
 
-        adView.registerNativeAd(nativeAd, mediaView)
+        adView.setNativeAd(nativeAd)
     }
 
     override fun createLoadingView(context: Context, container: ViewGroup) {

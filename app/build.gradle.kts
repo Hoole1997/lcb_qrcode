@@ -31,15 +31,13 @@ val pangleConfig = configMap("pangle")
 val pangleUnitConfig = pangleConfig.nestedMap("adUnitIds")
 val toponConfig = configMap("topon")
 val toponUnitConfig = toponConfig.nestedMap("adUnitIds")
-val maxConfig = configMap("max")
-val maxUnitConfig = maxConfig.nestedMap("adUnitIds")
 
 android {
-    namespace = "com.touka.lcb.qrcode"
+    namespace = "com.lcb.qrcode"
     compileSdk = appConfig.intValue("compileSdk", 36)
 
     defaultConfig {
-        applicationId = appConfig.stringValue("applicationId").ifBlank { "com.touka.lcb.qrcode" }
+        applicationId = appConfig.stringValue("applicationId").ifBlank { "com.lcb.qrcode" }
         minSdk = appConfig.intValue("minSdk", 26)
         targetSdk = appConfig.intValue("targetSdk", 35)
         versionCode = appConfig.intValue("versionCode", 1)
@@ -48,6 +46,9 @@ android {
         manifestPlaceholders["ADMOB_APPLICATION_ID"] = adMobConfig.stringValue("applicationId")
 
         buildConfigField("String", "DEFAULT_USER_CHANNEL", "\"${analyticsConfig.stringValue("defaultUserChannel")}\"")
+
+        buildConfigField("String", "PRIVACY_POLICY_URL", "\"${appConfig.stringValue("privacyPolicyUrl")}\"")
+
         buildConfigField("String", "ADMOB_APPLICATION_ID", "\"${adMobConfig.stringValue("applicationId")}\"")
         buildConfigField("String", "ADMOB_BANNER_ID", "\"${adMobUnitConfig.stringValue("banner")}\"")
         buildConfigField("String", "ADMOB_INTERSTITIAL_ID", "\"${adMobUnitConfig.stringValue("interstitial")}\"")
@@ -55,6 +56,7 @@ android {
         buildConfigField("String", "ADMOB_NATIVE_ID", "\"${adMobUnitConfig.stringValue("native")}\"")
         buildConfigField("String", "ADMOB_FULL_NATIVE_ID", "\"${adMobUnitConfig.stringValue("full_native")}\"")
         buildConfigField("String", "ADMOB_REWARDED_ID", "\"${adMobUnitConfig.stringValue("rewarded")}\"")
+
         buildConfigField("String", "PANGLE_APPLICATION_ID", "\"${pangleConfig.stringValue("applicationId")}\"")
         buildConfigField("String", "PANGLE_SPLASH_ID", "\"${pangleUnitConfig.stringValue("splash")}\"")
         buildConfigField("String", "PANGLE_BANNER_ID", "\"${pangleUnitConfig.stringValue("banner")}\"")
@@ -62,6 +64,7 @@ android {
         buildConfigField("String", "PANGLE_NATIVE_ID", "\"${pangleUnitConfig.stringValue("native")}\"")
         buildConfigField("String", "PANGLE_FULL_NATIVE_ID", "\"${pangleUnitConfig.stringValue("full_native")}\"")
         buildConfigField("String", "PANGLE_REWARDED_ID", "\"${pangleUnitConfig.stringValue("rewarded")}\"")
+
         buildConfigField("String", "TOPON_APPLICATION_ID", "\"${toponConfig.stringValue("applicationId")}\"")
         buildConfigField("String", "TOPON_APP_KEY", "\"${toponConfig.stringValue("appKey")}\"")
         buildConfigField("String", "TOPON_INTERSTITIAL_ID", "\"${toponUnitConfig.stringValue("interstitial")}\"")
@@ -70,13 +73,6 @@ android {
         buildConfigField("String", "TOPON_SPLASH_ID", "\"${toponUnitConfig.stringValue("splash")}\"")
         buildConfigField("String", "TOPON_FULL_NATIVE_ID", "\"${toponUnitConfig.stringValue("full_native")}\"")
         buildConfigField("String", "TOPON_BANNER_ID", "\"${toponUnitConfig.stringValue("banner")}\"")
-        buildConfigField("String", "MAX_SDK_KEY", "\"${maxConfig.stringValue("sdkKey")}\"")
-        buildConfigField("String", "MAX_SPLASH_ID", "\"${maxUnitConfig.stringValue("splash")}\"")
-        buildConfigField("String", "MAX_BANNER_ID", "\"${maxUnitConfig.stringValue("banner")}\"")
-        buildConfigField("String", "MAX_INTERSTITIAL_ID", "\"${maxUnitConfig.stringValue("interstitial")}\"")
-        buildConfigField("String", "MAX_NATIVE_ID", "\"${maxUnitConfig.stringValue("native")}\"")
-        buildConfigField("String", "MAX_FULL_NATIVE_ID", "\"${maxUnitConfig.stringValue("fullNative")}\"")
-        buildConfigField("String", "MAX_REWARDED_ID", "\"${maxUnitConfig.stringValue("rewarded")}\"")
     }
 
     flavorDimensions += "channel"
@@ -143,6 +139,5 @@ dependencies {
     implementation(libs.firebase.crashlytics.ndk)
     implementation(libs.firebase.perf)
     implementation(libs.gson)
-    implementation(libs.ads.mobile.sdk)
     implementation("com.github.bumptech.glide:glide:4.16.0")
 }

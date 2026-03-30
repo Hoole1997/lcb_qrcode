@@ -12,7 +12,9 @@
         android:layout_height="wrap_content"
         android:background="@android:color/white"
         android:minHeight="?attr/actionBarSize"
-        android:paddingHorizontal="4dp"
+        android:paddingHorizontal="8dp"
+        app:contentInsetStartWithNavigation="0dp"
+        app:navigationIconTint="@color/home_text_primary"
         app:title="@string/qrcode_settings_title"
         app:titleCentered="true"
         app:titleTextColor="@color/home_text_primary" />
@@ -54,7 +56,10 @@
                     <com.google.android.material.switchmaterial.SwitchMaterial
                         android:id="@+id/switchBeep"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"
+                        app:thumbTint="@color/settings_switch_thumb_tint"
+                        app:trackTint="@color/settings_switch_track_tint"
+                        app:useMaterialThemeColors="false" />
                 </LinearLayout>
 
                 <TextView
@@ -89,7 +94,10 @@
                     <com.google.android.material.switchmaterial.SwitchMaterial
                         android:id="@+id/switchVibrate"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"
+                        app:thumbTint="@color/settings_switch_thumb_tint"
+                        app:trackTint="@color/settings_switch_track_tint"
+                        app:useMaterialThemeColors="false" />
                 </LinearLayout>
 
                 <TextView
@@ -99,6 +107,56 @@
                     android:text="@string/qrcode_settings_vibrate_desc"
                     android:textColor="@color/home_text_secondary"
                     android:textSize="13sp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="0dp">
+
+            <LinearLayout
+                android:id="@+id/layoutLanguage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/home_ad_background"
+                android:gravity="center_vertical"
+                android:minHeight="64dp"
+                android:orientation="horizontal"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="12dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/qrcode_settings_language"
+                        android:textColor="@color/home_text_primary"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvLanguageValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:textColor="@color/home_text_secondary"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/settings_chevron"
+                    android:textColor="@color/home_text_secondary"
+                    android:textSize="20sp" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 

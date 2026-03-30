@@ -1,4 +1,4 @@
-package com.touka.lcb.qrcode.ad
+package com.lcb.qrcode.ad
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -6,20 +6,18 @@ import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
 import com.android.common.bill.ads.renderer.AdmobNativeAdRenderer
-import com.touka.lcb.qrcode.R
-import com.google.android.libraries.ads.mobile.sdk.nativead.NativeAd
-import com.google.android.libraries.ads.mobile.sdk.nativead.NativeAdView
+import com.google.android.gms.ads.nativead.NativeAd
+import com.google.android.gms.ads.nativead.NativeAdView
+import com.lcb.qrcode.R
 
 /**
  * Admob 原生广告默认渲染器
  */
-class DefaultAdmobNativeAdRenderer(
-    private val layoutResId: Int = R.layout.layout_native_ads
-) : AdmobNativeAdRenderer {
+class DefaultAdmobNativeAdRenderer : AdmobNativeAdRenderer {
 
     override fun createLayout(context: Context): NativeAdView {
         return LayoutInflater.from(context)
-            .inflate(layoutResId, null) as NativeAdView
+            .inflate(NativeAdLayoutResolver.admob(context), null) as NativeAdView
     }
 
     override fun bindData(adView: NativeAdView, nativeAd: NativeAd) {
@@ -48,6 +46,6 @@ class DefaultAdmobNativeAdRenderer(
         adView.priceView = null
         adView.storeView = null
 
-        adView.registerNativeAd(nativeAd, null)
+        adView.setNativeAd(nativeAd)
     }
 }

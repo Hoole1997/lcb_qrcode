@@ -1,4 +1,4 @@
-package com.touka.lcb.qrcode
+package com.lcb.qrcode
 
 import android.content.Intent
 import android.os.Bundle
@@ -14,7 +14,7 @@ import com.android.common.scanner.ui.OpenBarcodeScanActivity
 import com.android.common.scanner.ui.QRCodeScanActivity
 import com.android.common.scanner.ui.ScanHistoryActivity
 import com.android.common.scanner.util.loadNative
-import com.touka.lcb.qrcode.databinding.ActivityMainBinding
+import com.lcb.qrcode.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
@@ -58,7 +58,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun loadNativeAd() {
-        loadNative(binding.nativeAdContainer, styleType = NativeAdStyleType.STANDARD) { shown ->
+        loadNative(binding.nativeAdContainer, styleType = NativeAdStyleType.LARGE) { shown ->
             binding.adSection.isVisible = shown
             binding.nativeAdContainer.isVisible = shown
         }

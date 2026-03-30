@@ -1,9 +1,9 @@
-package com.touka.lcb.qrcode.ad
+package com.lcb.qrcode.ad
 
 import android.view.View
 import android.widget.TextView
 import com.android.common.bill.ads.renderer.AdLoadingDialogRenderer
-import com.touka.lcb.qrcode.R
+import com.lcb.qrcode.R
 
 class DefaultAdLoadingDialogRenderer : AdLoadingDialogRenderer {
 

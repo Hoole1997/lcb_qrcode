@@ -35,18 +35,6 @@ extra["topon"] = mapOf(
     ),
 )
 
-extra["max"] = mapOf(
-    "sdkKey" to "05TMDQ5tZabpXQ45_UTbmEGNUtVAzSTzT6KmWQc5_CuWdzccS4DCITZoL3yIWUG3bbq60QC_d4WF28tUC4gVTF",
-    "adUnitIds" to mapOf(
-        "splash" to "YOUR_SPLASH_AD_UNIT_ID",
-        "banner" to "YOUR_BANNER_AD_UNIT_ID",
-        "interstitial" to "YOUR_INTERSTITIAL_AD_UNIT_ID",
-        "native" to "YOUR_NATIVE_AD_UNIT_ID",
-        "fullNative" to "YOUR_FULL_NATIVE_AD_UNIT_ID",
-        "rewarded" to "YOUR_REWARDED_AD_UNIT_ID",
-    ),
-)
-
 extra["app"] = mapOf(
     "applicationId" to "com.pdf.reader.viewer.word.sheet.ppt.reader.document",
     "compileSdk" to 36,
@@ -54,6 +42,7 @@ extra["app"] = mapOf(
     "targetSdk" to 35,
     "versionCode" to 1,
     "versionName" to "1.0.0",
+    "privacyPolicyUrl" to "https://devs343.com/privacy.html",
 )
 
 extra["analytics"] = mapOf(

@@ -9,7 +9,7 @@
         android:bottom="46dp"
         android:left="23dp">
         <shape android:shape="rectangle">
-            <solid android:color="#2196F3" />
+            <solid android:color="@color/qrcode_primary" />
             <corners android:topRightRadius="4dp" />
         </shape>
     </item>
@@ -18,7 +18,7 @@
         android:left="23dp"
         android:top="4dp">
         <shape android:shape="rectangle">
-            <solid android:color="#2196F3" />
+            <solid android:color="@color/qrcode_primary" />
         </shape>
     </item>
     <item
@@ -26,7 +26,7 @@
         android:left="0dp"
         android:top="0dp">
         <shape android:shape="rectangle">
-            <solid android:color="#2196F3" />
+            <solid android:color="@color/qrcode_primary" />
             <corners android:topRightRadius="4dp" />
         </shape>
     </item>
