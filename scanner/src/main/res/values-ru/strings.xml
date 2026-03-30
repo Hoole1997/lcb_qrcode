@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- QR Code Scan -->
+    <string name="qrcode_scan_title">QR-сканирование</string>
+    <string name="barcode_scan_title">Сканирование штрих-кода</string>
+    <string name="scanner_pdf_title">Сканировать PDF</string>
+    <string name="qrcode_scan_hint">Выровняйте код в рамке</string>
+    <string name="qrcode_scan_upload_photo">Загрузить фото</string>
+    <string name="qrcode_scan_flashlight">Фонарик</string>
+    <string name="qrcode_scan_guide_title">Как сканировать?</string>
+    <string name="qrcode_scan_guide_step1">Направьте камеру на код.</string>
+    <string name="qrcode_scan_guide_step2">Выровняйте код в синей рамке.</string>
+    <string name="qrcode_scan_guide_step3">Перетащите ползунок для масштабирования.</string>
+    <string name="qrcode_scan_guide_step4">Код будет отсканирован автоматически.</string>
+    <string name="qrcode_scan_guide_continue">Продолжить</string>
+    <string name="qrcode_scan_failed_title">Не удалось прочитать QR-код</string>
+    <string name="qrcode_scan_failed_subtitle">Попробуйте отсканировать QR-код снова</string>
+    <string name="qrcode_scan_try_again">Повторить</string>
+    <string name="qrcode_scan_error_title">Ошибка сканирования</string>
+    <string name="qrcode_camera_permission_title">Требуется разрешение камеры</string>
+    <string name="qrcode_camera_permission_subtitle">Предоставьте разрешение камеры для сканирования QR-кодов</string>
+
+    <!-- Scan Result -->
+    <string name="qrcode_result_title">Результат</string>
+    <string name="qrcode_result_view_qr">Просмотр QR</string>
+    <string name="qrcode_result_share">Поделиться</string>
+    <string name="qrcode_result_search_web">Поиск в интернете</string>
+    <string name="qrcode_result_open_url">Открыть URL</string>
+    <string name="qrcode_result_copy">Копировать</string>
+    <string name="qrcode_result_copied">Скопировано в буфер обмена</string>
+    <string name="qrcode_result_type">Тип сканирования</string>
+    <string name="qrcode_action_back">Назад</string>
+    <string name="qrcode_action_favorite">Избранное</string>
+    <string name="qrcode_action_more">Ещё</string>
+    <string name="qrcode_action_ok">OK</string>
+    <string name="qrcode_action_open_with">Открыть в другом приложении</string>
+
+    <!-- Scan History -->
+    <string name="qrcode_history_title">История сканирования</string>
+    <string name="qrcode_history_tab_all">Все</string>
+    <string name="qrcode_history_tab_qrcode">QR-код</string>
+    <string name="qrcode_history_tab_url">URL</string>
+    <string name="qrcode_history_tab_document">Документ</string>
+    <string name="qrcode_history_empty">История пуста</string>
+    <string name="qrcode_history_empty_title">QR-коды не сканировались</string>
+    <string name="qrcode_history_empty_subtitle">Нажмите \'Сканировать QR-код\' и \'Сканировать штрих-код\'</string>
+    <string name="qrcode_scan_qr_code">Сканировать QR-код</string>
+    <string name="qrcode_scan_barcode">Сканировать штрих-код</string>
+    <string name="qrcode_history_document_empty_title">Нет документов</string>
+    <string name="qrcode_history_document_empty_subtitle">Нажмите Сканировать PDF, чтобы отсканировать документ.</string>
+    <string name="qrcode_history_document_scan_pdf">Сканировать PDF</string>
+    <string name="qrcode_history_delete_all">Удалить всё</string>
+    <string name="qrcode_history_delete_confirm">Вы уверены, что хотите удалить всю историю?</string>
+    <string name="qrcode_history_deleted">История удалена</string>
+
+    <!-- Favorites -->
+    <string name="qrcode_favorites_title">Избранное</string>
+    <string name="qrcode_favorites_empty">Избранное пусто</string>
+    <string name="qrcode_favorites_empty_title">Вы не добавили избранное</string>
+    <string name="qrcode_action_add_to_favorites">Добавить в избранное</string>
+    <string name="qrcode_action_remove_from_favorites">Удалить из избранного</string>
+    <string name="qrcode_action_delete">Удалить</string>
+    <string name="qrcode_action_share">Поделиться</string>
+    <string name="qrcode_action_close">Закрыть</string>
+    <string name="qrcode_added_to_favorites">Добавлено в избранное</string>
+    <string name="qrcode_removed_from_favorites">Удалено из избранного</string>
+
+    <!-- Settings -->
+    <string name="qrcode_settings_title">Настройки</string>
+    <string name="qrcode_settings_beep">Звуковой сигнал</string>
+    <string name="qrcode_settings_beep_desc">Звук при успешном сканировании</string>
+    <string name="qrcode_settings_vibrate">Вибрация</string>
+    <string name="qrcode_settings_vibrate_desc">Вибрация при сканировании</string>
+    <string name="qrcode_settings_language">Язык приложения</string>
+    <string name="qrcode_language_title">Выбрать язык</string>
+    <string name="qrcode_language_tip">Выберите язык приложения</string>
+    <string name="qrcode_language_confirm">Подтвердить</string>
+    <string name="qrcode_settings_lock_screen">Экран блокировки</string>
+    <string name="qrcode_settings_lock_screen_desc">Показывать экран блокировки</string>
+    <string name="qrcode_settings_rate_us">Оцените нас</string>
+    <string name="qrcode_settings_rate_us_desc">Оцените приложение</string>
+    <string name="qrcode_settings_share_app">Поделиться приложением</string>
+    <string name="qrcode_settings_share_app_desc">Поделитесь с друзьями</string>
+    <string name="qrcode_settings_privacy">Политика конфиденциальности</string>
+    <string name="qrcode_settings_privacy_desc">Прочитайте нашу политику</string>
+
+    <!-- Scan Animation -->
+    <string name="qrcode_tap_to_scan">Сканировать</string>
+
+    <!-- View QR Dialog -->
+    <string name="qrcode_view_qr_download">Скачать</string>
+    <string name="qrcode_view_qr_copy_link">Копировать ссылку</string>
+    <string name="qrcode_view_qr_share">Поделиться</string>
+    <string name="qrcode_view_qr_saved">QR-код сохранён в галерею</string>
+    <string name="qrcode_view_qr_save_failed">Не удалось сохранить QR-код</string>
+
+    <!-- Home -->
+    <string name="qrcode_home_scan_barcode">Сканировать штрих-код</string>
+    <string name="qrcode_home_create_code">Создать код</string>
+    <string name="qrcode_home_scan_pdf">Сканировать PDF</string>
+    <string name="qrcode_home_history">История</string>
+    <string name="qrcode_home_scanner_title">Сканировать QR-код</string>
+    <string name="qrcode_home_scanner_subtitle">Быстро сканируйте любой QR-код</string>
+
+    <!-- Create Code -->
+    <string name="qrcode_create_title">Создать код</string>
+    <string name="qrcode_tab_qr_code">QR-код</string>
+    <string name="qrcode_tab_barcode">Штрих-код</string>
+    <string name="qrcode_create_standard_qr_codes">Стандартные QR-коды</string>
+    <string name="qrcode_create_standard_barcodes">Стандартные штрих-коды</string>
+    <string name="qrcode_create_type_website">Сайт</string>
+    <string name="qrcode_create_type_wifi">WiFi</string>
+    <string name="qrcode_create_type_contact">Контакт</string>
+    <string name="qrcode_create_type_phone">Телефон</string>
+    <string name="qrcode_create_type_email">Email</string>
+    <string name="qrcode_create_type_my_card">Моя карта</string>
+    <string name="qrcode_create_type_text">Текст</string>
+    <string name="qrcode_create_type_sms">SMS</string>
+    <string name="qrcode_create_type_event">Событие</string>
+    <string name="qrcode_create_type_location">Местоположение</string>
+    <string name="qrcode_create_type_bookmark">Закладка</string>
+    <string name="qrcode_create_type_app">Приложение</string>
+</resources>

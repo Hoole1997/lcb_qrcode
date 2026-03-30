@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- QR Code Scan -->
+    <string name="qrcode_scan_title">Escaneo QR</string>
+    <string name="barcode_scan_title">Escaneo de código de barras</string>
+    <string name="scanner_pdf_title">Escanear PDF</string>
+    <string name="qrcode_scan_hint">Alinea el código dentro del marco</string>
+    <string name="qrcode_scan_upload_photo">Subir foto</string>
+    <string name="qrcode_scan_flashlight">Linterna</string>
+    <string name="qrcode_scan_guide_title">¿Cómo escanear?</string>
+    <string name="qrcode_scan_guide_step1">Apunta tu cámara al código.</string>
+    <string name="qrcode_scan_guide_step2">Alinea el código dentro del marco azul.</string>
+    <string name="qrcode_scan_guide_step3">Arrastra la barra para acercar o alejar.</string>
+    <string name="qrcode_scan_guide_step4">El código se escaneará automáticamente.</string>
+    <string name="qrcode_scan_guide_continue">Continuar</string>
+    <string name="qrcode_scan_failed_title">No se pudo leer el código QR</string>
+    <string name="qrcode_scan_failed_subtitle">Intenta escanear el código QR de nuevo</string>
+    <string name="qrcode_scan_try_again">Intentar de nuevo</string>
+    <string name="qrcode_scan_error_title">Error de escaneo</string>
+    <string name="qrcode_camera_permission_title">Se requiere permiso de cámara</string>
+    <string name="qrcode_camera_permission_subtitle">Por favor otorga permiso de cámara para escanear códigos QR</string>
+
+    <!-- Scan Result -->
+    <string name="qrcode_result_title">Resultado</string>
+    <string name="qrcode_result_view_qr">Ver QR</string>
+    <string name="qrcode_result_share">Compartir</string>
+    <string name="qrcode_result_search_web">Buscar en web</string>
+    <string name="qrcode_result_open_url">Abrir URL</string>
+    <string name="qrcode_result_copy">Copiar</string>
+    <string name="qrcode_result_copied">Copiado al portapapeles</string>
+    <string name="qrcode_result_type">Tipo de escaneo</string>
+    <string name="qrcode_action_back">Atrás</string>
+    <string name="qrcode_action_favorite">Favorito</string>
+    <string name="qrcode_action_more">Más</string>
+    <string name="qrcode_action_ok">OK</string>
+    <string name="qrcode_action_open_with">Abrir con otra aplicación</string>
+
+    <!-- Scan History -->
+    <string name="qrcode_history_title">Historial de escaneo</string>
+    <string name="qrcode_history_tab_all">Todo</string>
+    <string name="qrcode_history_tab_qrcode">Código QR</string>
+    <string name="qrcode_history_tab_url">URL</string>
+    <string name="qrcode_history_tab_document">Documento</string>
+    <string name="qrcode_history_empty">Aún no hay historial</string>
+    <string name="qrcode_history_empty_title">No se escaneó ningún código QR</string>
+    <string name="qrcode_history_empty_subtitle">Haz clic en \'Escanear código QR\' y \'Escanear código de barras\'</string>
+    <string name="qrcode_scan_qr_code">Escanear código QR</string>
+    <string name="qrcode_scan_barcode">Escanear código de barras</string>
+    <string name="qrcode_history_document_empty_title">Sin documentos</string>
+    <string name="qrcode_history_document_empty_subtitle">Haga clic en Escanear PDF para escanear su documento.</string>
+    <string name="qrcode_history_document_scan_pdf">Escanear PDF</string>
+    <string name="qrcode_history_delete_all">Eliminar todo</string>
+    <string name="qrcode_history_delete_confirm">¿Estás seguro de que quieres eliminar todo el historial?</string>
+    <string name="qrcode_history_deleted">Historial eliminado</string>
+
+    <!-- Favorites -->
+    <string name="qrcode_favorites_title">Favoritos</string>
+    <string name="qrcode_favorites_empty">Aún no hay favoritos</string>
+    <string name="qrcode_favorites_empty_title">No has añadido ningún favorito</string>
+    <string name="qrcode_action_add_to_favorites">Añadir a favoritos</string>
+    <string name="qrcode_action_remove_from_favorites">Eliminar de favoritos</string>
+    <string name="qrcode_action_delete">Eliminar</string>
+    <string name="qrcode_action_share">Compartir</string>
+    <string name="qrcode_action_close">Cerrar</string>
+    <string name="qrcode_added_to_favorites">Añadido a favoritos</string>
+    <string name="qrcode_removed_from_favorites">Eliminado de favoritos</string>
+
+    <!-- Settings -->
+    <string name="qrcode_settings_title">Configuración</string>
+    <string name="qrcode_settings_beep">Pitido</string>
+    <string name="qrcode_settings_beep_desc">Pitido cuando el escaneo es exitoso</string>
+    <string name="qrcode_settings_vibrate">Vibrar</string>
+    <string name="qrcode_settings_vibrate_desc">Vibrar al escanear</string>
+    <string name="qrcode_settings_language">Idioma de la app</string>
+    <string name="qrcode_language_title">Elegir idioma</string>
+    <string name="qrcode_language_tip">Selecciona el idioma de tu app</string>
+    <string name="qrcode_language_confirm">Confirmar</string>
+    <string name="qrcode_settings_lock_screen">Pantalla de bloqueo</string>
+    <string name="qrcode_settings_lock_screen_desc">Mostrar pantalla de bloqueo al desbloquear</string>
+    <string name="qrcode_settings_rate_us">Califícanos</string>
+    <string name="qrcode_settings_rate_us_desc">Califica esta app para ayudarnos</string>
+    <string name="qrcode_settings_share_app">Compartir app</string>
+    <string name="qrcode_settings_share_app_desc">Comparte con tus amigos</string>
+    <string name="qrcode_settings_privacy">Política de privacidad</string>
+    <string name="qrcode_settings_privacy_desc">Lee nuestra política de privacidad</string>
+
+    <!-- Scan Animation -->
+    <string name="qrcode_tap_to_scan">Escanear</string>
+
+    <!-- View QR Dialog -->
+    <string name="qrcode_view_qr_download">Descargar</string>
+    <string name="qrcode_view_qr_copy_link">Copiar enlace</string>
+    <string name="qrcode_view_qr_share">Compartir</string>
+    <string name="qrcode_view_qr_saved">Código QR guardado en galería</string>
+    <string name="qrcode_view_qr_save_failed">Error al guardar código QR</string>
+
+    <!-- Home -->
+    <string name="qrcode_home_scan_barcode">Escanear código</string>
+    <string name="qrcode_home_create_code">Crear código</string>
+    <string name="qrcode_home_scan_pdf">Escanear PDF</string>
+    <string name="qrcode_home_history">Historial</string>
+    <string name="qrcode_home_scanner_title">Escanear código QR</string>
+    <string name="qrcode_home_scanner_subtitle">Escanea cualquier código QR rápidamente</string>
+
+    <!-- Create Code -->
+    <string name="qrcode_create_title">Crear código</string>
+    <string name="qrcode_tab_qr_code">Código QR</string>
+    <string name="qrcode_tab_barcode">Código de barras</string>
+    <string name="qrcode_create_standard_qr_codes">Códigos QR estándar</string>
+    <string name="qrcode_create_standard_barcodes">Códigos de barras estándar</string>
+    <string name="qrcode_create_type_website">Sitio web</string>
+    <string name="qrcode_create_type_wifi">WiFi</string>
+    <string name="qrcode_create_type_contact">Contacto</string>
+    <string name="qrcode_create_type_phone">Teléfono</string>
+    <string name="qrcode_create_type_email">Correo</string>
+    <string name="qrcode_create_type_my_card">Mi tarjeta</string>
+    <string name="qrcode_create_type_text">Texto</string>
+    <string name="qrcode_create_type_sms">SMS</string>
+    <string name="qrcode_create_type_event">Evento</string>
+    <string name="qrcode_create_type_location">Ubicación</string>
+    <string name="qrcode_create_type_bookmark">Marcador</string>
+    <string name="qrcode_create_type_app">App</string>
+</resources>

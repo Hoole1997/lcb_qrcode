@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="home_scan_barcode_subtitle">Quét mã vạch sản phẩm</string>
+    <string name="home_scan_pdf_subtitle">Quét nhiều loại tài liệu</string>
+    <string name="home_history_subtitle">Xem lịch sử quét của bạn</string>
+    <string name="bill_ad_loading">Đang tải quảng cáo…</string>
+</resources>

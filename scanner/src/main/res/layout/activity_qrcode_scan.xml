@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000">
+
+    <!-- 相机预览 - 全屏 -->
+    <androidx.camera.view.PreviewView
+        android:id="@+id/previewView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!-- 返回按钮 -->
+    <FrameLayout
+        android:id="@+id/ivBack"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center"
+            android:contentDescription="Back"
+            android:src="@drawable/ic_arrow_back"
+            android:tint="#FFFFFF" />
+
+    </FrameLayout>
+
+    <!-- 提示文字 -->
+    <TextView
+        android:id="@+id/tvHint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/qrcode_scan_hint"
+        android:textColor="#999999"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivBack" />
+
+    <!-- 扫描框容器 - 仅作为覆盖层 -->
+    <FrameLayout
+        android:id="@+id/scannerContainer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="45dp"
+        android:layout_marginTop="35dp"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvHint"
+        app:layout_constraintWidth_percent="0.76">
+
+        <!-- 扫描框四角 - 左上 -->
+        <View
+            android:id="@+id/cornerTopLeft"
+            android:layout_width="27dp"
+            android:layout_height="54dp"
+            android:layout_gravity="start|top"
+            android:background="@drawable/qrcode_scan_corner_top_left" />
+
+        <!-- 扫描框四角 - 右上 -->
+        <View
+            android:id="@+id/cornerTopRight"
+            android:layout_width="27dp"
+            android:layout_height="54dp"
+            android:layout_gravity="end|top"
+            android:background="@drawable/qrcode_scan_corner_top_right" />
+
+        <!-- 扫描框四角 - 左下 -->
+        <View
+            android:id="@+id/cornerBottomLeft"
+            android:layout_width="27dp"
+            android:layout_height="54dp"
+            android:layout_gravity="start|bottom"
+            android:background="@drawable/qrcode_scan_corner_bottom_left" />
+
+        <!-- 扫描框四角 - 右下 -->
+        <View
+            android:id="@+id/cornerBottomRight"
+            android:layout_width="27dp"
+            android:layout_height="54dp"
+            android:layout_gravity="end|bottom"
+            android:background="@drawable/qrcode_scan_corner_bottom_right" />
+
+        <!-- 扫描线 - 用于上下扫动动画（包含扫光效果） -->
+        <View
+            android:id="@+id/scanLine"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="top"
+            android:background="@drawable/qrcode_scan_line_gradient" />
+
+    </FrameLayout>
+
+    <!-- 缩放控制区域 -->
+    <FrameLayout
+        android:id="@+id/ivZoomOut"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="18dp"
+        app:layout_constraintBottom_toBottomOf="@id/zoomSlider"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/zoomSlider">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center"
+            android:background="@null"
+            android:contentDescription="Zoom Out"
+            android:src="@drawable/ic_zoom_out" />
+
+    </FrameLayout>
+
+    <SeekBar
+        android:id="@+id/zoomSlider"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="60dp"
+        android:max="100"
+        android:maxHeight="5dp"
+        android:minHeight="5dp"
+        android:progress="0"
+        android:progressDrawable="@drawable/seekbar_progress"
+        android:thumb="@drawable/seekbar_thumb"
+        android:splitTrack="false"
+        app:layout_constraintEnd_toStartOf="@id/ivZoomIn"
+        app:layout_constraintStart_toEndOf="@id/ivZoomOut"
+        app:layout_constraintTop_toBottomOf="@id/scannerContainer" />
+
+    <FrameLayout
+        android:id="@+id/ivZoomIn"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="18dp"
+        app:layout_constraintBottom_toBottomOf="@id/zoomSlider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/zoomSlider">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center"
+            android:background="@null"
+            android:contentDescription="Zoom In"
+            android:src="@drawable/ic_zoom_in" />
+
+    </FrameLayout>
+
+    <!-- 底部功能按钮区域 -->
+    <LinearLayout
+        android:id="@+id/bottomButtons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingHorizontal="26dp"
+        app:layout_constraintBottom_toTopOf="@id/ad_Container">
+
+        <!-- 上传图片按钮 -->
+        <LinearLayout
+            android:id="@+id/btnUploadPhoto"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:contentDescription="Upload Photo"
+                android:src="@drawable/ic_upload_photo" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:fontFamily="sans-serif-medium"
+                android:maxLines="1"
+                android:text="@string/qrcode_scan_upload_photo"
+                android:textColor="#FFFFFF"
+                android:textSize="13sp" />
+
+        </LinearLayout>
+
+        <!-- 占位空间 -->
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+
+        <!-- 手电筒按钮 -->
+        <LinearLayout
+            android:id="@+id/btnFlashLight"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/ivFlashLight"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:contentDescription="FlashLight"
+                android:src="@drawable/ic_flashlight_off" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/qrcode_scan_flashlight"
+                android:textColor="#FFFFFF"
+                android:textSize="13sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/ad_Container"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

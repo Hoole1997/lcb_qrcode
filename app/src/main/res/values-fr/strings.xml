@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="home_scan_barcode_subtitle">Scannez les codes-barres des produits</string>
+    <string name="home_scan_pdf_subtitle">Scannez divers documents</string>
+    <string name="home_history_subtitle">Voir votre historique de scan</string>
+    <string name="bill_ad_loading">Chargement de l\'annonce…</string>
+</resources>

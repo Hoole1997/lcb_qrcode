@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent">
+
+    <!-- 扫描成功 Lottie 动画 - 位置对应扫描框中心（向上偏移以匹配扫描框位置） -->
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottie_scan_success"
+        android:layout_width="280dp"
+        android:layout_height="280dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="140dp"
+        app:lottie_rawRes="@raw/scan_success"
+        app:lottie_autoPlay="false"
+        app:lottie_loop="false" />
+
+</FrameLayout>

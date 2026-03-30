@@ -1,0 +1,10 @@
+[
+  {
+    "name": "ad_impression",
+    "rate": 80
+  },
+  {
+    "name": "ad_other",
+    "rate": 20
+  }
+]

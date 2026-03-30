@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="home_scan_barcode_subtitle">扫描商品条码</string>
+    <string name="home_scan_pdf_subtitle">扫描各类文档</string>
+    <string name="home_history_subtitle">查看扫描历史</string>
+    <string name="bill_ad_loading">广告加载中…</string>
+</resources>

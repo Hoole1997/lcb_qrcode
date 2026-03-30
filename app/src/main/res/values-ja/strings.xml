@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="home_scan_barcode_subtitle">商品バーコードをスキャン</string>
+    <string name="home_scan_pdf_subtitle">さまざまな書類をスキャン</string>
+    <string name="home_history_subtitle">スキャン履歴を表示</string>
+    <string name="bill_ad_loading">広告を読み込み中…</string>
+</resources>

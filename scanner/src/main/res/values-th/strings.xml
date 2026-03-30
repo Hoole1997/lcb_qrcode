@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- QR Code Scan -->
+    <string name="qrcode_scan_title">สแกน QR</string>
+    <string name="barcode_scan_title">สแกนบาร์โค้ด</string>
+    <string name="scanner_pdf_title">สแกน PDF</string>
+    <string name="qrcode_scan_hint">จัดตำแหน่งโค้ดในกรอบ</string>
+    <string name="qrcode_scan_upload_photo">อัปโหลดรูปภาพ</string>
+    <string name="qrcode_scan_flashlight">ไฟฉาย</string>
+    <string name="qrcode_scan_guide_title">วิธีสแกน?</string>
+    <string name="qrcode_scan_guide_step1">ชี้กล้องไปที่โค้ด</string>
+    <string name="qrcode_scan_guide_step2">จัดตำแหน่งโค้ดในกรอบสีน้ำเงิน</string>
+    <string name="qrcode_scan_guide_step3">ลากแถบเพื่อซูมเข้าหรือออก</string>
+    <string name="qrcode_scan_guide_step4">โค้ดจะถูกสแกนโดยอัตโนมัติ</string>
+    <string name="qrcode_scan_guide_continue">ดำเนินการต่อ</string>
+    <string name="qrcode_scan_failed_title">ไม่สามารถอ่าน QR โค้ดได้</string>
+    <string name="qrcode_scan_failed_subtitle">ลองสแกน QR โค้ดอีกครั้ง</string>
+    <string name="qrcode_scan_try_again">ลองอีกครั้ง</string>
+    <string name="qrcode_scan_error_title">ข้อผิดพลาดในการสแกน</string>
+    <string name="qrcode_camera_permission_title">ต้องการสิทธิ์กล้อง</string>
+    <string name="qrcode_camera_permission_subtitle">กรุณาให้สิทธิ์กล้องเพื่อสแกน QR โค้ด</string>
+
+    <!-- Scan Result -->
+    <string name="qrcode_result_title">ผลลัพธ์</string>
+    <string name="qrcode_result_view_qr">ดู QR</string>
+    <string name="qrcode_result_share">แชร์</string>
+    <string name="qrcode_result_search_web">ค้นหาเว็บ</string>
+    <string name="qrcode_result_open_url">เปิด URL</string>
+    <string name="qrcode_result_copy">คัดลอก</string>
+    <string name="qrcode_result_copied">คัดลอกไปยังคลิปบอร์ดแล้ว</string>
+    <string name="qrcode_result_type">ประเภทการสแกน</string>
+    <string name="qrcode_action_back">กลับ</string>
+    <string name="qrcode_action_favorite">รายการโปรด</string>
+    <string name="qrcode_action_more">เพิ่มเติม</string>
+    <string name="qrcode_action_ok">ตกลง</string>
+    <string name="qrcode_action_open_with">เปิดด้วยแอปอื่น</string>
+
+    <!-- Scan History -->
+    <string name="qrcode_history_title">ประวัติการสแกน</string>
+    <string name="qrcode_history_tab_all">ทั้งหมด</string>
+    <string name="qrcode_history_tab_qrcode">QR โค้ด</string>
+    <string name="qrcode_history_tab_url">URL</string>
+    <string name="qrcode_history_tab_document">เอกสาร</string>
+    <string name="qrcode_history_empty">ยังไม่มีประวัติ</string>
+    <string name="qrcode_history_empty_title">ยังไม่มี QR โค้ดที่สแกน</string>
+    <string name="qrcode_history_empty_subtitle">คลิก \'สแกน QR โค้ด\' และ \'สแกนบาร์โค้ด\'</string>
+    <string name="qrcode_scan_qr_code">สแกน QR โค้ด</string>
+    <string name="qrcode_scan_barcode">สแกนบาร์โค้ด</string>
+    <string name="qrcode_history_document_empty_title">ไม่มีเอกสาร</string>
+    <string name="qrcode_history_document_empty_subtitle">คลิกสแกน PDF เพื่อสแกนเอกสารของคุณ</string>
+    <string name="qrcode_history_document_scan_pdf">สแกน PDF</string>
+    <string name="qrcode_history_delete_all">ลบทั้งหมด</string>
+    <string name="qrcode_history_delete_confirm">คุณแน่ใจหรือไม่ว่าต้องการลบประวัติทั้งหมด?</string>
+    <string name="qrcode_history_deleted">ลบประวัติแล้ว</string>
+
+    <!-- Favorites -->
+    <string name="qrcode_favorites_title">รายการโปรด</string>
+    <string name="qrcode_favorites_empty">ยังไม่มีรายการโปรด</string>
+    <string name="qrcode_favorites_empty_title">คุณยังไม่ได้เพิ่มรายการโปรด</string>
+    <string name="qrcode_action_add_to_favorites">เพิ่มในรายการโปรด</string>
+    <string name="qrcode_action_remove_from_favorites">ลบออกจากรายการโปรด</string>
+    <string name="qrcode_action_delete">ลบ</string>
+    <string name="qrcode_action_share">แชร์</string>
+    <string name="qrcode_action_close">ปิด</string>
+    <string name="qrcode_added_to_favorites">เพิ่มในรายการโปรดแล้ว</string>
+    <string name="qrcode_removed_from_favorites">ลบออกจากรายการโปรดแล้ว</string>
+
+    <!-- Settings -->
+    <string name="qrcode_settings_title">การตั้งค่า</string>
+    <string name="qrcode_settings_beep">เสียงบี๊บ</string>
+    <string name="qrcode_settings_beep_desc">เสียงบี๊บเมื่อสแกนสำเร็จ</string>
+    <string name="qrcode_settings_vibrate">สั่น</string>
+    <string name="qrcode_settings_vibrate_desc">สั่นเมื่อสแกน</string>
+    <string name="qrcode_settings_language">ภาษาแอป</string>
+    <string name="qrcode_language_title">เลือกภาษา</string>
+    <string name="qrcode_language_tip">เลือกภาษาแอปของคุณ</string>
+    <string name="qrcode_language_confirm">ยืนยัน</string>
+    <string name="qrcode_settings_lock_screen">หน้าจอล็อก</string>
+    <string name="qrcode_settings_lock_screen_desc">แสดงหน้าจอล็อกเมื่อปลดล็อก</string>
+    <string name="qrcode_settings_rate_us">ให้คะแนนเรา</string>
+    <string name="qrcode_settings_rate_us_desc">ให้คะแนนแอปนี้</string>
+    <string name="qrcode_settings_share_app">แชร์แอป</string>
+    <string name="qrcode_settings_share_app_desc">แชร์กับเพื่อน</string>
+    <string name="qrcode_settings_privacy">นโยบายความเป็นส่วนตัว</string>
+    <string name="qrcode_settings_privacy_desc">อ่านนโยบายความเป็นส่วนตัว</string>
+
+    <!-- Scan Animation -->
+    <string name="qrcode_tap_to_scan">แตะเพื่อสแกน</string>
+
+    <!-- View QR Dialog -->
+    <string name="qrcode_view_qr_download">ดาวน์โหลด</string>
+    <string name="qrcode_view_qr_copy_link">คัดลอกลิงก์</string>
+    <string name="qrcode_view_qr_share">แชร์</string>
+    <string name="qrcode_view_qr_saved">บันทึก QR โค้ดไปยังแกลเลอรีแล้ว</string>
+    <string name="qrcode_view_qr_save_failed">บันทึก QR โค้ดไม่สำเร็จ</string>
+
+    <!-- Home -->
+    <string name="qrcode_home_scan_barcode">สแกนบาร์โค้ด</string>
+    <string name="qrcode_home_create_code">สร้างโค้ด</string>
+    <string name="qrcode_home_scan_pdf">สแกน PDF</string>
+    <string name="qrcode_home_history">ประวัติ</string>
+    <string name="qrcode_home_scanner_title">สแกน QR โค้ด</string>
+    <string name="qrcode_home_scanner_subtitle">สแกน QR โค้ดใดก็ได้อย่างรวดเร็ว</string>
+
+    <!-- Create Code -->
+    <string name="qrcode_create_title">สร้างโค้ด</string>
+    <string name="qrcode_tab_qr_code">QR โค้ด</string>
+    <string name="qrcode_tab_barcode">บาร์โค้ด</string>
+    <string name="qrcode_create_standard_qr_codes">QR โค้ดมาตรฐาน</string>
+    <string name="qrcode_create_standard_barcodes">บาร์โค้ดมาตรฐาน</string>
+    <string name="qrcode_create_type_website">เว็บไซต์</string>
+    <string name="qrcode_create_type_wifi">WiFi</string>
+    <string name="qrcode_create_type_contact">ผู้ติดต่อ</string>
+    <string name="qrcode_create_type_phone">โทรศัพท์</string>
+    <string name="qrcode_create_type_email">อีเมล</string>
+    <string name="qrcode_create_type_my_card">บัตรของฉัน</string>
+    <string name="qrcode_create_type_text">ข้อความ</string>
+    <string name="qrcode_create_type_sms">SMS</string>
+    <string name="qrcode_create_type_event">กิจกรรม</string>
+    <string name="qrcode_create_type_location">ตำแหน่ง</string>
+    <string name="qrcode_create_type_bookmark">บุ๊กมาร์ก</string>
+    <string name="qrcode_create_type_app">แอป</string>
+</resources>

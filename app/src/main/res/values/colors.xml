@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="home_qr_yellow">#F7BD29</color>
+    <color name="home_text_primary">#333333</color>
+    <color name="home_text_secondary">#666666</color>
+    <color name="home_text_muted">#999999</color>
+    <color name="home_card_blue">#E9F2FF</color>
+    <color name="home_card_blue_stroke">#C5D3E9</color>
+    <color name="home_card_green">#E8FFE8</color>
+    <color name="home_card_green_stroke">#CBE5C2</color>
+    <color name="home_card_peach">#FFEEE9</color>
+    <color name="home_card_peach_stroke">#F0CEC2</color>
+    <color name="home_card_yellow">#FFF7D8</color>
+    <color name="home_card_yellow_stroke">#E7DA9E</color>
+    <color name="home_ad_background">#F8F8F8</color>
+</resources>

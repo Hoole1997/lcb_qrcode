@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "340363986307",
+    "project_id": "pdf-rebuild",
+    "storage_bucket": "pdf-rebuild.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:340363986307:android:c7f67fe8f9c8d0d47922b6",
+        "android_client_info": {
+          "package_name": "com.pdf.reader.viewer.word.sheet.ppt.reader.document"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDVTuRSVw41vZa5Lq82xeP43HROI-WIHxg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

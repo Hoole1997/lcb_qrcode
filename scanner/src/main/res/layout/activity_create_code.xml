@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <!-- 顶部渐变背景 -->
+    <View
+        android:id="@+id/topGradient"
+        android:layout_width="match_parent"
+        android:layout_height="88dp"
+        android:background="@drawable/qrcode_bg_scan_result_top"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- 返回按钮 -->
+    <FrameLayout
+        android:id="@+id/ivBack"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="44dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center"
+            android:contentDescription="@string/qrcode_action_back"
+            android:src="@drawable/ic_arrow_back"
+            app:tint="#333333" />
+
+    </FrameLayout>
+
+    <!-- 标题 -->
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="55dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/qrcode_create_title"
+        android:textColor="#333333"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Tab 切换容器 -->
+    <FrameLayout
+        android:id="@+id/tabContainer"
+        android:layout_width="252dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="7dp"
+        android:background="@drawable/qrcode_bg_tab_container"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/topGradient">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingHorizontal="5dp">
+
+            <!-- QR Code Tab -->
+            <TextView
+                android:id="@+id/tabQrCode"
+                android:layout_width="0dp"
+                android:layout_height="34dp"
+                android:layout_weight="1"
+                android:background="@drawable/qrcode_bg_tab_selected"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center"
+                android:text="@string/qrcode_tab_qr_code"
+                android:textColor="@android:color/white"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <!-- Barcode Tab -->
+            <TextView
+                android:id="@+id/tabBarcode"
+                android:layout_width="0dp"
+                android:layout_height="34dp"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center"
+                android:text="@string/qrcode_tab_barcode"
+                android:textColor="#333333"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <!-- 剪贴板内容卡片 -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardClipboard"
+        android:layout_width="0dp"
+        android:layout_height="76dp"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginTop="20dp"
+        android:visibility="gone"
+        android:clickable="true"
+        android:focusable="true"
+        app:cardBackgroundColor="@android:color/white"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tabContainer"
+        app:strokeColor="#F3F3F3"
+        app:strokeWidth="1dp"
+        app:rippleColor="@color/ripple_color">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingHorizontal="12dp">
+
+            <!-- 剪贴板图标背景 -->
+            <View
+                android:id="@+id/clipboardIconBg"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@drawable/qrcode_bg_create_icon"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!-- 剪贴板图标 -->
+            <ImageView
+                android:id="@+id/ivClipboardIcon"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:src="@drawable/qrcode_ic_text"
+                app:layout_constraintBottom_toBottomOf="@id/clipboardIconBg"
+                app:layout_constraintEnd_toEndOf="@id/clipboardIconBg"
+                app:layout_constraintStart_toStartOf="@id/clipboardIconBg"
+                app:layout_constraintTop_toTopOf="@id/clipboardIconBg" />
+
+            <!-- 剪贴板内容 -->
+            <TextView
+                android:id="@+id/tvClipboardContent"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="8dp"
+                android:ellipsize="end"
+                android:fontFamily="sans-serif-medium"
+                android:maxLines="1"
+                android:text="QR_CODE:BEGIN:VCARD..."
+                android:textColor="#666666"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toTopOf="@id/tvClipboardTime"
+                app:layout_constraintEnd_toStartOf="@id/ivClipboardArrow"
+                app:layout_constraintStart_toEndOf="@id/clipboardIconBg"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="packed" />
+
+            <!-- 剪贴板时间 -->
+            <TextView
+                android:id="@+id/tvClipboardTime"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="8dp"
+                android:text="19 November 2025 | 04:51 PM"
+                android:textColor="#999999"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/ivClipboardArrow"
+                app:layout_constraintStart_toEndOf="@id/clipboardIconBg"
+                app:layout_constraintTop_toBottomOf="@id/tvClipboardContent" />
+
+            <!-- 箭头 -->
+            <ImageView
+                android:id="@+id/ivClipboardArrow"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:rotation="180"
+                android:src="@drawable/ic_arrow_back"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="#333333" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Standard QR Codes 标题 -->
+    <TextView
+        android:id="@+id/tvSectionTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/qrcode_create_standard_qr_codes"
+        android:textColor="#2B85FF"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cardClipboard" />
+
+    <!-- 网格列表 -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:clipToPadding="false"
+        android:paddingBottom="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvSectionTitle" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

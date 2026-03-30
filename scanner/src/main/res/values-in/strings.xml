@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- QR Code Scan -->
+    <string name="qrcode_scan_title">Pindai QR</string>
+    <string name="barcode_scan_title">Pindai Barcode</string>
+    <string name="scanner_pdf_title">Pindai PDF</string>
+    <string name="qrcode_scan_hint">Sejajarkan kode dalam bingkai</string>
+    <string name="qrcode_scan_upload_photo">Unggah Foto</string>
+    <string name="qrcode_scan_flashlight">Senter</string>
+    <string name="qrcode_scan_guide_title">Cara Memindai?</string>
+    <string name="qrcode_scan_guide_step1">Arahkan kamera ke kode.</string>
+    <string name="qrcode_scan_guide_step2">Sejajarkan kode dalam bingkai biru.</string>
+    <string name="qrcode_scan_guide_step3">Seret bilah untuk memperbesar atau memperkecil.</string>
+    <string name="qrcode_scan_guide_step4">Kode akan dipindai secara otomatis.</string>
+    <string name="qrcode_scan_guide_continue">Lanjutkan</string>
+    <string name="qrcode_scan_failed_title">Tidak dapat membaca Kode QR</string>
+    <string name="qrcode_scan_failed_subtitle">Coba pindai Kode QR lagi</string>
+    <string name="qrcode_scan_try_again">Coba lagi</string>
+    <string name="qrcode_scan_error_title">Kesalahan Pemindaian</string>
+    <string name="qrcode_camera_permission_title">Izin Kamera Diperlukan</string>
+    <string name="qrcode_camera_permission_subtitle">Berikan izin kamera untuk memindai kode QR</string>
+
+    <!-- Scan Result -->
+    <string name="qrcode_result_title">Hasil</string>
+    <string name="qrcode_result_view_qr">Lihat QR</string>
+    <string name="qrcode_result_share">Bagikan</string>
+    <string name="qrcode_result_search_web">Cari di Web</string>
+    <string name="qrcode_result_open_url">Buka URL</string>
+    <string name="qrcode_result_copy">Salin</string>
+    <string name="qrcode_result_copied">Disalin ke clipboard</string>
+    <string name="qrcode_result_type">Jenis pemindaian</string>
+    <string name="qrcode_action_back">Kembali</string>
+    <string name="qrcode_action_favorite">Favorit</string>
+    <string name="qrcode_action_more">Lainnya</string>
+    <string name="qrcode_action_ok">OK</string>
+    <string name="qrcode_action_open_with">Buka dengan aplikasi lain</string>
+
+    <!-- Scan History -->
+    <string name="qrcode_history_title">Riwayat Pemindaian</string>
+    <string name="qrcode_history_tab_all">Semua</string>
+    <string name="qrcode_history_tab_qrcode">Kode QR</string>
+    <string name="qrcode_history_tab_url">URL</string>
+    <string name="qrcode_history_tab_document">Dokumen</string>
+    <string name="qrcode_history_empty">Belum ada riwayat pemindaian</string>
+    <string name="qrcode_history_empty_title">Belum ada Kode QR yang dipindai</string>
+    <string name="qrcode_history_empty_subtitle">Klik \'Pindai Kode QR\' dan \'Pindai Barcode\'</string>
+    <string name="qrcode_scan_barcode">Pindai Barcode</string>
+    <string name="qrcode_history_document_empty_title">Tidak ada dokumen</string>
+    <string name="qrcode_history_document_empty_subtitle">Klik Pindai PDF untuk memindai dokumen Anda.</string>
+    <string name="qrcode_history_document_scan_pdf">Pindai PDF</string>
+    <string name="qrcode_history_delete_all">Hapus Semua</string>
+    <string name="qrcode_history_delete_confirm">Yakin ingin menghapus semua riwayat?</string>
+    <string name="qrcode_history_deleted">Riwayat dihapus</string>
+
+    <!-- Favorites -->
+    <string name="qrcode_favorites_title">Favorit</string>
+    <string name="qrcode_favorites_empty">Belum ada favorit</string>
+    <string name="qrcode_favorites_empty_title">Anda belum menambahkan favorit</string>
+    <string name="qrcode_action_add_to_favorites">Tambah ke Favorit</string>
+    <string name="qrcode_action_remove_from_favorites">Hapus dari Favorit</string>
+    <string name="qrcode_action_delete">Hapus</string>
+    <string name="qrcode_action_share">Bagikan</string>
+    <string name="qrcode_action_close">Tutup</string>
+    <string name="qrcode_added_to_favorites">Ditambahkan ke favorit</string>
+    <string name="qrcode_removed_from_favorites">Dihapus dari favorit</string>
+
+    <!-- Settings -->
+    <string name="qrcode_settings_title">Pengaturan</string>
+    <string name="qrcode_settings_beep">Bunyi</string>
+    <string name="qrcode_settings_beep_desc">Bunyi saat pemindaian berhasil</string>
+    <string name="qrcode_settings_vibrate">Getar</string>
+    <string name="qrcode_settings_vibrate_desc">Getar saat memindai</string>
+    <string name="qrcode_settings_language">Bahasa Aplikasi</string>
+    <string name="qrcode_language_title">Pilih Bahasa</string>
+    <string name="qrcode_language_tip">Pilih bahasa aplikasi Anda</string>
+    <string name="qrcode_language_confirm">Konfirmasi</string>
+    <string name="qrcode_settings_lock_screen">Layar Kunci</string>
+    <string name="qrcode_settings_lock_screen_desc">Tampilkan layar kunci saat membuka</string>
+    <string name="qrcode_settings_rate_us">Beri Rating</string>
+    <string name="qrcode_settings_rate_us_desc">Beri rating aplikasi ini</string>
+    <string name="qrcode_settings_share_app">Bagikan Aplikasi</string>
+    <string name="qrcode_settings_share_app_desc">Bagikan dengan teman</string>
+    <string name="qrcode_settings_privacy">Kebijakan Privasi</string>
+    <string name="qrcode_settings_privacy_desc">Baca kebijakan privasi kami</string>
+
+    <!-- Scan Animation -->
+    <string name="qrcode_tap_to_scan">Ketuk</string>
+
+    <!-- View QR Dialog -->
+    <string name="qrcode_view_qr_download">Unduh</string>
+    <string name="qrcode_view_qr_copy_link">Salin Tautan</string>
+    <string name="qrcode_view_qr_share">Bagikan</string>
+    <string name="qrcode_view_qr_saved">Kode QR disimpan ke galeri</string>
+    <string name="qrcode_view_qr_save_failed">Gagal menyimpan kode QR</string>
+
+    <!-- Home -->
+    <string name="qrcode_home_scan_barcode">Pindai Barcode</string>
+    <string name="qrcode_home_create_code">Buat Kode</string>
+    <string name="qrcode_home_scan_pdf">Pindai PDF</string>
+    <string name="qrcode_home_history">Riwayat</string>
+    <string name="qrcode_home_scanner_title">Pindai Kode QR</string>
+    <string name="qrcode_home_scanner_subtitle">Pindai kode QR apa pun dengan cepat</string>
+
+    <!-- Create Code -->
+    <string name="qrcode_create_title">Buat Kode</string>
+    <string name="qrcode_tab_qr_code">Kode QR</string>
+    <string name="qrcode_tab_barcode">Barcode</string>
+    <string name="qrcode_create_standard_qr_codes">Kode QR Standar</string>
+    <string name="qrcode_create_standard_barcodes">Barcode Standar</string>
+    <string name="qrcode_create_type_website">Situs Web</string>
+    <string name="qrcode_create_type_wifi">WiFi</string>
+    <string name="qrcode_create_type_contact">Kontak</string>
+    <string name="qrcode_create_type_phone">Telepon</string>
+    <string name="qrcode_create_type_email">Email</string>
+    <string name="qrcode_create_type_my_card">Kartu Saya</string>
+    <string name="qrcode_create_type_text">Teks</string>
+    <string name="qrcode_create_type_sms">SMS</string>
+    <string name="qrcode_create_type_event">Acara</string>
+    <string name="qrcode_create_type_location">Lokasi</string>
+    <string name="qrcode_create_type_bookmark">Penanda</string>
+    <string name="qrcode_create_type_app">Aplikasi</string>
+</resources>

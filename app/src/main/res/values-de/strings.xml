@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="home_scan_barcode_subtitle">Produktbarcodes scannen</string>
+    <string name="home_scan_pdf_subtitle">Verschiedene Dokumente scannen</string>
+    <string name="home_history_subtitle">Scanverlauf anzeigen</string>
+    <string name="bill_ad_loading">Anzeige wird geladen…</string>
+</resources>

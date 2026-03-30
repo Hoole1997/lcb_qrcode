@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="text_primary">#1F2937</color>
+    <color name="text_secondary">#6B7280</color>
+    <color name="background_light">#F8FAFC</color>
+    <color name="divider">#E5E7EB</color>
+    <color name="default_background">#ffffff</color>
+
+    <color name="theme_color">#F87171</color>
+    <color name="primary_color">#5B7EFB</color>
+    <color name="accent_color">#5B7EFB</color>
+    <color name="error_color">#F87171</color>
+    <color name="ripple_color">#1A000000</color>
+
+    <color name="dialog_text_primary">#111827</color>
+    <color name="dialog_text_secondary">#6B7280</color>
+    <color name="dialog_background">#FEFEFE</color>
+    <color name="dialog_card_background">#F9FAFB</color>
+
+    <color name="pdf_card_background">#FEFEFE</color>
+    <color name="pdf_page_selected_primary">#3B82F6</color>
+    <color name="pdf_selection_overlay">#4D3B82F6</color>
+    <color name="pdf_text_page_number">#111827</color>
+    <color name="pdf_border_light">#E5E7EB</color>
+
+    <color name="checkbox_tint">#5B7EFB</color>
+    <color name="selected_indicator_color">#5B7EFB</color>
+
+    <color name="qrcode_favorite_active">#FFD700</color>
+    <color name="qrcode_favorite_inactive">#333333</color>
+    <color name="qrcode_primary">#2B85FF</color>
+    <color name="qrcode_text_dark">#333333</color>
+
+    <color name="tool_copy_color">#10B981</color>
+    <color name="tool_highlight_color">#F59E0B</color>
+    <color name="tool_underline_color">#3B82F6</color>
+    <color name="tool_strikethrough_color">#F87171</color>
+    <color name="tool_button_text_color">#5B7EFB</color>
+</resources>

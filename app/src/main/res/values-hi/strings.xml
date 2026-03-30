@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="home_scan_barcode_subtitle">उत्पाद बारकोड स्कैन करें</string>
+    <string name="home_scan_pdf_subtitle">विभिन्न दस्तावेज़ स्कैन करें</string>
+    <string name="home_history_subtitle">अपना स्कैन इतिहास देखें</string>
+    <string name="bill_ad_loading">विज्ञापन लोड हो रहा है…</string>
+</resources>

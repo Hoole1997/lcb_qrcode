@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- QR Code Scan -->
+    <string name="qrcode_scan_title">QR 掃描</string>
+    <string name="barcode_scan_title">條碼掃描</string>
+    <string name="scanner_pdf_title">掃描PDF</string>
+    <string name="qrcode_scan_hint">將條碼對準框內</string>
+    <string name="qrcode_scan_upload_photo">上傳圖片</string>
+    <string name="qrcode_scan_flashlight">手電筒</string>
+    <string name="qrcode_scan_guide_title">如何掃描？</string>
+    <string name="qrcode_scan_guide_step1">將鏡頭對準條碼。</string>
+    <string name="qrcode_scan_guide_step2">將條碼對準藍色框內。</string>
+    <string name="qrcode_scan_guide_step3">拖動滑桿放大或縮小。</string>
+    <string name="qrcode_scan_guide_step4">條碼將自動掃描。</string>
+    <string name="qrcode_scan_guide_continue">繼續</string>
+    <string name="qrcode_scan_failed_title">無法讀取 QR 碼</string>
+    <string name="qrcode_scan_failed_subtitle">請再次嘗試掃描 QR 碼</string>
+    <string name="qrcode_scan_try_again">重試</string>
+    <string name="qrcode_scan_error_title">掃描錯誤</string>
+    <string name="qrcode_camera_permission_title">需要相機權限</string>
+    <string name="qrcode_camera_permission_subtitle">請授予相機權限以掃描 QR 碼</string>
+
+    <!-- Scan Result -->
+    <string name="qrcode_result_title">結果</string>
+    <string name="qrcode_result_view_qr">查看 QR</string>
+    <string name="qrcode_result_share">分享</string>
+    <string name="qrcode_result_search_web">網頁搜尋</string>
+    <string name="qrcode_result_open_url">開啟連結</string>
+    <string name="qrcode_result_copy">複製</string>
+    <string name="qrcode_result_copied">已複製到剪貼簿</string>
+    <string name="qrcode_result_type">掃描類型</string>
+    <string name="qrcode_action_back">返回</string>
+    <string name="qrcode_action_favorite">收藏</string>
+    <string name="qrcode_action_more">更多</string>
+    <string name="qrcode_action_ok">好的</string>
+    <string name="qrcode_action_open_with">使用其他應用程式開啟</string>
+
+    <!-- Scan History -->
+    <string name="qrcode_history_title">掃描歷史</string>
+    <string name="qrcode_history_tab_all">全部</string>
+    <string name="qrcode_history_tab_qrcode">二維碼</string>
+    <string name="qrcode_history_tab_url">網址</string>
+    <string name="qrcode_history_tab_document">文檔</string>
+    <string name="qrcode_history_empty">暫無歷史記錄</string>
+    <string name="qrcode_history_empty_title">尚未掃描任何 QR 碼</string>
+    <string name="qrcode_history_empty_subtitle">點擊"掃描 QR 碼"和"掃描條碼"</string>
+    <string name="qrcode_scan_qr_code">掃描 QR 碼</string>
+    <string name="qrcode_scan_barcode">掃描條碼</string>
+    <string name="qrcode_history_document_empty_title">暫無文檔</string>
+    <string name="qrcode_history_document_empty_subtitle">點擊掃描PDF來掃描您的文檔</string>
+    <string name="qrcode_history_document_scan_pdf">掃描PDF</string>
+    <string name="qrcode_history_delete_all">刪除全部</string>
+    <string name="qrcode_history_delete_confirm">確定要刪除所有歷史記錄嗎？</string>
+    <string name="qrcode_history_deleted">已刪除歷史記錄</string>
+
+    <!-- Favorites -->
+    <string name="qrcode_favorites_title">收藏</string>
+    <string name="qrcode_favorites_empty">暫無收藏</string>
+    <string name="qrcode_favorites_empty_title">您尚未添加任何收藏</string>
+    <string name="qrcode_action_add_to_favorites">添加到收藏</string>
+    <string name="qrcode_action_remove_from_favorites">從收藏中移除</string>
+    <string name="qrcode_action_delete">刪除</string>
+    <string name="qrcode_action_share">分享</string>
+    <string name="qrcode_action_close">關閉</string>
+    <string name="qrcode_added_to_favorites">已添加到收藏</string>
+    <string name="qrcode_removed_from_favorites">已從收藏中移除</string>
+
+    <!-- Settings -->
+    <string name="qrcode_settings_title">設定</string>
+    <string name="qrcode_settings_beep">提示音</string>
+    <string name="qrcode_settings_beep_desc">掃描成功時發出提示音</string>
+    <string name="qrcode_settings_vibrate">震動</string>
+    <string name="qrcode_settings_vibrate_desc">掃描時震動</string>
+    <string name="qrcode_settings_language">應用程式語言</string>
+    <string name="qrcode_language_title">選擇語言</string>
+    <string name="qrcode_language_tip">選擇您的應用程式語言</string>
+    <string name="qrcode_language_confirm">確認</string>
+    <string name="qrcode_settings_lock_screen">鎖屏</string>
+    <string name="qrcode_settings_lock_screen_desc">解鎖時顯示鎖屏</string>
+    <string name="qrcode_settings_rate_us">評價我們</string>
+    <string name="qrcode_settings_rate_us_desc">評價此應用程式</string>
+    <string name="qrcode_settings_share_app">分享應用程式</string>
+    <string name="qrcode_settings_share_app_desc">與朋友分享</string>
+    <string name="qrcode_settings_privacy">隱私權政策</string>
+    <string name="qrcode_settings_privacy_desc">閱讀我們的隱私權政策</string>
+
+    <!-- Scan Animation -->
+    <string name="qrcode_tap_to_scan">點擊掃描</string>
+
+    <!-- View QR Dialog -->
+    <string name="qrcode_view_qr_download">下載</string>
+    <string name="qrcode_view_qr_copy_link">複製連結</string>
+    <string name="qrcode_view_qr_share">分享</string>
+    <string name="qrcode_view_qr_saved">QR 碼已儲存到相簿</string>
+    <string name="qrcode_view_qr_save_failed">儲存 QR 碼失敗</string>
+
+    <!-- Home -->
+    <string name="qrcode_home_scan_barcode">掃描條碼</string>
+    <string name="qrcode_home_create_code">建立碼</string>
+    <string name="qrcode_home_scan_pdf">掃描PDF</string>
+    <string name="qrcode_home_history">歷史</string>
+    <string name="qrcode_home_scanner_title">掃描 QR 碼</string>
+    <string name="qrcode_home_scanner_subtitle">快速掃描任意 QR 碼</string>
+
+    <!-- Create Code -->
+    <string name="qrcode_create_title">建立碼</string>
+    <string name="qrcode_tab_qr_code">QR 碼</string>
+    <string name="qrcode_tab_barcode">條碼</string>
+    <string name="qrcode_create_standard_qr_codes">標準 QR 碼</string>
+    <string name="qrcode_create_standard_barcodes">標準條碼</string>
+    <string name="qrcode_create_type_website">網站</string>
+    <string name="qrcode_create_type_wifi">WiFi</string>
+    <string name="qrcode_create_type_contact">聯絡人</string>
+    <string name="qrcode_create_type_phone">電話</string>
+    <string name="qrcode_create_type_email">郵件</string>
+    <string name="qrcode_create_type_my_card">我的名片</string>
+    <string name="qrcode_create_type_text">文字</string>
+    <string name="qrcode_create_type_sms">短訊</string>
+    <string name="qrcode_create_type_event">事件</string>
+    <string name="qrcode_create_type_location">位置</string>
+    <string name="qrcode_create_type_bookmark">書籤</string>
+    <string name="qrcode_create_type_app">應用程式</string>
+</resources>

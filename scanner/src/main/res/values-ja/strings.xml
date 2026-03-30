@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- QR Code Scan -->
+    <string name="qrcode_scan_title">QRスキャン</string>
+    <string name="barcode_scan_title">バーコードスキャン</string>
+    <string name="scanner_pdf_title">PDFをスキャン</string>
+    <string name="qrcode_scan_hint">フレーム内にコードを合わせてください</string>
+    <string name="qrcode_scan_upload_photo">写真をアップロード</string>
+    <string name="qrcode_scan_flashlight">フラッシュライト</string>
+    <string name="qrcode_scan_guide_title">スキャン方法</string>
+    <string name="qrcode_scan_guide_step1">カメラをコードに向けてください。</string>
+    <string name="qrcode_scan_guide_step2">青いフレーム内にコードを合わせてください。</string>
+    <string name="qrcode_scan_guide_step3">バーをドラッグしてズームイン/アウト。</string>
+    <string name="qrcode_scan_guide_step4">コードは自動的にスキャンされます。</string>
+    <string name="qrcode_scan_guide_continue">続行</string>
+    <string name="qrcode_scan_failed_title">QRコードを読み取れませんでした</string>
+    <string name="qrcode_scan_failed_subtitle">QRコードを再度スキャンしてください</string>
+    <string name="qrcode_scan_try_again">再試行</string>
+    <string name="qrcode_scan_error_title">スキャンエラー</string>
+    <string name="qrcode_camera_permission_title">カメラの許可が必要です</string>
+    <string name="qrcode_camera_permission_subtitle">QRコードをスキャンするにはカメラの許可を付与してください</string>
+
+    <!-- Scan Result -->
+    <string name="qrcode_result_title">結果</string>
+    <string name="qrcode_result_view_qr">QRを表示</string>
+    <string name="qrcode_result_share">共有</string>
+    <string name="qrcode_result_search_web">ウェブ検索</string>
+    <string name="qrcode_result_open_url">URLを開く</string>
+    <string name="qrcode_result_copy">コピー</string>
+    <string name="qrcode_result_copied">クリップボードにコピーしました</string>
+    <string name="qrcode_result_type">スキャンタイプ</string>
+    <string name="qrcode_action_back">戻る</string>
+    <string name="qrcode_action_favorite">お気に入り</string>
+    <string name="qrcode_action_more">その他</string>
+    <string name="qrcode_action_ok">OK</string>
+    <string name="qrcode_action_open_with">他のアプリで開く</string>
+
+    <!-- Scan History -->
+    <string name="qrcode_history_title">スキャン履歴</string>
+    <string name="qrcode_history_tab_all">すべて</string>
+    <string name="qrcode_history_tab_qrcode">QRコード</string>
+    <string name="qrcode_history_tab_url">URL</string>
+    <string name="qrcode_history_tab_document">ドキュメント</string>
+    <string name="qrcode_history_empty">スキャン履歴はまだありません</string>
+    <string name="qrcode_history_empty_title">QRコードがスキャンされていません</string>
+    <string name="qrcode_history_empty_subtitle">「QRコードをスキャン」と「バーコードをスキャン」をクリック</string>
+    <string name="qrcode_scan_qr_code">QRコードをスキャン</string>
+    <string name="qrcode_scan_barcode">バーコードをスキャン</string>
+    <string name="qrcode_history_document_empty_title">ドキュメントがありません</string>
+    <string name="qrcode_history_document_empty_subtitle">PDFをスキャンをクリックしてドキュメントをスキャンしてください</string>
+    <string name="qrcode_history_document_scan_pdf">PDFをスキャン</string>
+    <string name="qrcode_history_delete_all">すべて削除</string>
+    <string name="qrcode_history_delete_confirm">すべての履歴を削除しますか？</string>
+    <string name="qrcode_history_deleted">履歴を削除しました</string>
+
+    <!-- Favorites -->
+    <string name="qrcode_favorites_title">お気に入り</string>
+    <string name="qrcode_favorites_empty">お気に入りはまだありません</string>
+    <string name="qrcode_favorites_empty_title">お気に入りを追加していません</string>
+    <string name="qrcode_action_add_to_favorites">お気に入りに追加</string>
+    <string name="qrcode_action_remove_from_favorites">お気に入りから削除</string>
+    <string name="qrcode_action_delete">削除</string>
+    <string name="qrcode_action_share">共有</string>
+    <string name="qrcode_action_close">閉じる</string>
+    <string name="qrcode_added_to_favorites">お気に入りに追加しました</string>
+    <string name="qrcode_removed_from_favorites">お気に入りから削除しました</string>
+
+    <!-- Settings -->
+    <string name="qrcode_settings_title">設定</string>
+    <string name="qrcode_settings_beep">ビープ音</string>
+    <string name="qrcode_settings_beep_desc">スキャン成功時にビープ音</string>
+    <string name="qrcode_settings_vibrate">バイブレーション</string>
+    <string name="qrcode_settings_vibrate_desc">スキャン時にバイブレーション</string>
+    <string name="qrcode_settings_language">アプリの言語</string>
+    <string name="qrcode_language_title">言語を選択</string>
+    <string name="qrcode_language_tip">アプリの言語を選択してください</string>
+    <string name="qrcode_language_confirm">確認</string>
+    <string name="qrcode_settings_lock_screen">ロック画面</string>
+    <string name="qrcode_settings_lock_screen_desc">ロック解除時にロック画面を表示</string>
+    <string name="qrcode_settings_rate_us">評価する</string>
+    <string name="qrcode_settings_rate_us_desc">このアプリを評価してください</string>
+    <string name="qrcode_settings_share_app">アプリを共有</string>
+    <string name="qrcode_settings_share_app_desc">友達と共有</string>
+    <string name="qrcode_settings_privacy">プライバシーポリシー</string>
+    <string name="qrcode_settings_privacy_desc">プライバシーポリシーを読む</string>
+
+    <!-- Scan Animation -->
+    <string name="qrcode_tap_to_scan">スキャン</string>
+
+    <!-- View QR Dialog -->
+    <string name="qrcode_view_qr_download">ダウンロード</string>
+    <string name="qrcode_view_qr_copy_link">リンクをコピー</string>
+    <string name="qrcode_view_qr_share">共有</string>
+    <string name="qrcode_view_qr_saved">QRコードをギャラリーに保存しました</string>
+    <string name="qrcode_view_qr_save_failed">QRコードの保存に失敗しました</string>
+
+    <!-- Home -->
+    <string name="qrcode_home_scan_barcode">バーコードをスキャン</string>
+    <string name="qrcode_home_create_code">コード作成</string>
+    <string name="qrcode_home_scan_pdf">PDFスキャン</string>
+    <string name="qrcode_home_history">履歴</string>
+    <string name="qrcode_home_scanner_title">QRコードをスキャン</string>
+    <string name="qrcode_home_scanner_subtitle">あらゆるQRコードを素早くスキャン</string>
+
+    <!-- Create Code -->
+    <string name="qrcode_create_title">コード作成</string>
+    <string name="qrcode_tab_qr_code">QRコード</string>
+    <string name="qrcode_tab_barcode">バーコード</string>
+    <string name="qrcode_create_standard_qr_codes">標準QRコード</string>
+    <string name="qrcode_create_standard_barcodes">標準バーコード</string>
+    <string name="qrcode_create_type_website">ウェブサイト</string>
+    <string name="qrcode_create_type_wifi">WiFi</string>
+    <string name="qrcode_create_type_contact">連絡先</string>
+    <string name="qrcode_create_type_phone">電話</string>
+    <string name="qrcode_create_type_email">メール</string>
+    <string name="qrcode_create_type_my_card">マイカード</string>
+    <string name="qrcode_create_type_text">テキスト</string>
+    <string name="qrcode_create_type_sms">SMS</string>
+    <string name="qrcode_create_type_event">イベント</string>
+    <string name="qrcode_create_type_location">位置情報</string>
+    <string name="qrcode_create_type_bookmark">ブックマーク</string>
+    <string name="qrcode_create_type_app">アプリ</string>
+</resources>

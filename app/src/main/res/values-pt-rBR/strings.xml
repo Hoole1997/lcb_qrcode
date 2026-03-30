@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="home_scan_barcode_subtitle">Escaneie códigos de barras de produtos</string>
+    <string name="home_scan_pdf_subtitle">Escaneie vários documentos</string>
+    <string name="home_history_subtitle">Veja seu histórico de digitalização</string>
+    <string name="bill_ad_loading">Carregando anúncio…</string>
+</resources>

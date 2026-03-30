@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <uses-feature android:name="android.hardware.camera" android:required="false" />
+    <uses-feature android:name="android.hardware.camera.autofocus" android:required="false" />
+
+    <application android:requestLegacyExternalStorage="true">
+        <!-- QR Code Scanner -->
+        <activity
+            android:name=".ui.QRCodeScanActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:icon="@mipmap/img_qrcode_scan"
+            android:label="@string/qrcode_scan_title"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Scanner">
+            <intent-filter>
+                <action android:name="app.lawnchair.action.OPEN_QRCODE_SCAN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- Barcode Scanner Entry -->
+        <activity
+            android:name=".ui.OpenBarcodeScanActivity"
+            android:exported="true"
+            android:icon="@mipmap/img_barcode_scan"
+            android:label="@string/barcode_scan_title"
+            android:theme="@style/Theme.Scanner.Transparent"
+            android:excludeFromRecents="true"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="app.lawnchair.action.OPEN_BARCODE_SCAN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- Document Scanner -->
+        <activity
+            android:name=".ui.DocumentScannerActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:icon="@mipmap/ic_pdf_scanner"
+            android:label="@string/scanner_pdf_title"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Scanner">
+            <intent-filter>
+                <action android:name="app.lawnchair.action.OPEN_PDF_SCANNER" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- Scan Result -->
+        <activity
+            android:name=".ui.ScanResultActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Scanner" />
+
+        <!-- Create QR Code -->
+        <activity
+            android:name=".ui.CreateCodeActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Scanner" />
+
+        <!-- Scan History -->
+        <activity
+            android:name=".ui.ScanHistoryActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Scanner" />
+
+        <!-- Favorites -->
+        <activity
+            android:name=".ui.FavoritesActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Scanner" />
+
+        <!-- PDF Viewer -->
+        <activity
+            android:name=".ui.PdfViewerActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Scanner" />
+
+    </application>
+
+</manifest>

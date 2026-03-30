@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="home_scan_barcode_subtitle">Сканируйте штрих-коды товаров</string>
+    <string name="home_scan_pdf_subtitle">Сканируйте различные документы</string>
+    <string name="home_history_subtitle">Просматривайте историю сканирования</string>
+    <string name="bill_ad_loading">Загрузка рекламы…</string>
+</resources>

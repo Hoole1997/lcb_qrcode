@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- QR Code Scan -->
+    <string name="qrcode_scan_title">Quét QR</string>
+    <string name="barcode_scan_title">Quét mã vạch</string>
+    <string name="scanner_pdf_title">Quét PDF</string>
+    <string name="qrcode_scan_hint">Căn chỉnh mã trong khung</string>
+    <string name="qrcode_scan_upload_photo">Tải ảnh lên</string>
+    <string name="qrcode_scan_flashlight">Đèn pin</string>
+    <string name="qrcode_scan_guide_title">Cách quét?</string>
+    <string name="qrcode_scan_guide_step1">Hướng camera vào mã.</string>
+    <string name="qrcode_scan_guide_step2">Căn chỉnh mã trong khung xanh.</string>
+    <string name="qrcode_scan_guide_step3">Kéo thanh để phóng to hoặc thu nhỏ.</string>
+    <string name="qrcode_scan_guide_step4">Mã sẽ được quét tự động.</string>
+    <string name="qrcode_scan_guide_continue">Tiếp tục</string>
+    <string name="qrcode_scan_failed_title">Không thể đọc mã QR</string>
+    <string name="qrcode_scan_failed_subtitle">Thử quét lại mã QR</string>
+    <string name="qrcode_scan_try_again">Thử lại</string>
+    <string name="qrcode_scan_error_title">Lỗi quét</string>
+    <string name="qrcode_camera_permission_title">Cần quyền Camera</string>
+    <string name="qrcode_camera_permission_subtitle">Vui lòng cấp quyền camera để quét mã QR</string>
+
+    <!-- Scan Result -->
+    <string name="qrcode_result_title">Kết quả</string>
+    <string name="qrcode_result_view_qr">Xem QR</string>
+    <string name="qrcode_result_share">Chia sẻ</string>
+    <string name="qrcode_result_search_web">Tìm kiếm web</string>
+    <string name="qrcode_result_open_url">Mở URL</string>
+    <string name="qrcode_result_copy">Sao chép</string>
+    <string name="qrcode_result_copied">Đã sao chép vào clipboard</string>
+    <string name="qrcode_result_type">Loại quét</string>
+    <string name="qrcode_action_back">Quay lại</string>
+    <string name="qrcode_action_favorite">Yêu thích</string>
+    <string name="qrcode_action_more">Thêm</string>
+    <string name="qrcode_action_ok">OK</string>
+    <string name="qrcode_action_open_with">Mở bằng ứng dụng khác</string>
+
+    <!-- Scan History -->
+    <string name="qrcode_history_title">Lịch sử quét</string>
+    <string name="qrcode_history_tab_all">Tất cả</string>
+    <string name="qrcode_history_tab_qrcode">Mã QR</string>
+    <string name="qrcode_history_tab_url">URL</string>
+    <string name="qrcode_history_tab_document">Tài liệu</string>
+    <string name="qrcode_history_empty">Chưa có lịch sử</string>
+    <string name="qrcode_history_empty_title">Chưa quét mã QR nào</string>
+    <string name="qrcode_history_empty_subtitle">Nhấn \'Quét mã QR\' và \'Quét mã vạch\'</string>
+    <string name="qrcode_scan_qr_code">Quét mã QR</string>
+    <string name="qrcode_scan_barcode">Quét mã vạch</string>
+    <string name="qrcode_history_document_empty_title">Không có tài liệu</string>
+    <string name="qrcode_history_document_empty_subtitle">Nhấn Quét PDF để quét tài liệu của bạn.</string>
+    <string name="qrcode_history_document_scan_pdf">Quét PDF</string>
+    <string name="qrcode_history_delete_all">Xóa tất cả</string>
+    <string name="qrcode_history_delete_confirm">Bạn có chắc muốn xóa tất cả lịch sử?</string>
+    <string name="qrcode_history_deleted">Đã xóa lịch sử</string>
+
+    <!-- Favorites -->
+    <string name="qrcode_favorites_title">Yêu thích</string>
+    <string name="qrcode_favorites_empty">Chưa có yêu thích</string>
+    <string name="qrcode_favorites_empty_title">Bạn chưa thêm yêu thích nào</string>
+    <string name="qrcode_action_add_to_favorites">Thêm vào yêu thích</string>
+    <string name="qrcode_action_remove_from_favorites">Xóa khỏi yêu thích</string>
+    <string name="qrcode_action_delete">Xóa</string>
+    <string name="qrcode_action_share">Chia sẻ</string>
+    <string name="qrcode_action_close">Đóng</string>
+    <string name="qrcode_added_to_favorites">Đã thêm vào yêu thích</string>
+    <string name="qrcode_removed_from_favorites">Đã xóa khỏi yêu thích</string>
+
+    <!-- Settings -->
+    <string name="qrcode_settings_title">Cài đặt</string>
+    <string name="qrcode_settings_beep">Tiếng bíp</string>
+    <string name="qrcode_settings_beep_desc">Tiếng bíp khi quét thành công</string>
+    <string name="qrcode_settings_vibrate">Rung</string>
+    <string name="qrcode_settings_vibrate_desc">Rung khi quét</string>
+    <string name="qrcode_settings_language">Ngôn ngữ ứng dụng</string>
+    <string name="qrcode_language_title">Chọn ngôn ngữ</string>
+    <string name="qrcode_language_tip">Chọn ngôn ngữ ứng dụng của bạn</string>
+    <string name="qrcode_language_confirm">Xác nhận</string>
+    <string name="qrcode_settings_lock_screen">Màn hình khóa</string>
+    <string name="qrcode_settings_lock_screen_desc">Hiển thị màn hình khóa khi mở khóa</string>
+    <string name="qrcode_settings_rate_us">Đánh giá chúng tôi</string>
+    <string name="qrcode_settings_rate_us_desc">Đánh giá ứng dụng này</string>
+    <string name="qrcode_settings_share_app">Chia sẻ ứng dụng</string>
+    <string name="qrcode_settings_share_app_desc">Chia sẻ với bạn bè</string>
+    <string name="qrcode_settings_privacy">Chính sách bảo mật</string>
+    <string name="qrcode_settings_privacy_desc">Đọc chính sách bảo mật</string>
+
+    <!-- Scan Animation -->
+    <string name="qrcode_tap_to_scan">Nhấn để quét</string>
+
+    <!-- View QR Dialog -->
+    <string name="qrcode_view_qr_download">Tải xuống</string>
+    <string name="qrcode_view_qr_copy_link">Sao chép liên kết</string>
+    <string name="qrcode_view_qr_share">Chia sẻ</string>
+    <string name="qrcode_view_qr_saved">Đã lưu mã QR vào thư viện</string>
+    <string name="qrcode_view_qr_save_failed">Lưu mã QR thất bại</string>
+
+    <!-- Home -->
+    <string name="qrcode_home_scan_barcode">Quét mã vạch</string>
+    <string name="qrcode_home_create_code">Tạo mã</string>
+    <string name="qrcode_home_scan_pdf">Quét PDF</string>
+    <string name="qrcode_home_history">Lịch sử</string>
+    <string name="qrcode_home_scanner_title">Quét mã QR</string>
+    <string name="qrcode_home_scanner_subtitle">Quét nhanh bất kỳ mã QR nào</string>
+
+    <!-- Create Code -->
+    <string name="qrcode_create_title">Tạo mã</string>
+    <string name="qrcode_tab_qr_code">Mã QR</string>
+    <string name="qrcode_tab_barcode">Mã vạch</string>
+    <string name="qrcode_create_standard_qr_codes">Mã QR tiêu chuẩn</string>
+    <string name="qrcode_create_standard_barcodes">Mã vạch tiêu chuẩn</string>
+    <string name="qrcode_create_type_website">Trang web</string>
+    <string name="qrcode_create_type_wifi">WiFi</string>
+    <string name="qrcode_create_type_contact">Liên hệ</string>
+    <string name="qrcode_create_type_phone">Điện thoại</string>
+    <string name="qrcode_create_type_email">Email</string>
+    <string name="qrcode_create_type_my_card">Thẻ của tôi</string>
+    <string name="qrcode_create_type_text">Văn bản</string>
+    <string name="qrcode_create_type_sms">SMS</string>
+    <string name="qrcode_create_type_event">Sự kiện</string>
+    <string name="qrcode_create_type_location">Vị trí</string>
+    <string name="qrcode_create_type_bookmark">Đánh dấu</string>
+    <string name="qrcode_create_type_app">Ứng dụng</string>
+</resources>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/content_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#F7F7F7"
+        android:orientation="vertical"
+        android:paddingHorizontal="22dp"
+        android:paddingVertical="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- 顶部区域：图标和标题 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <!-- 应用图标 -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/iconCv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="12dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="0dp">
+
+                <ImageView
+                    android:id="@+id/iv_ad_icon"
+                    android:layout_width="52dp"
+                    android:layout_height="52dp"
+                    android:scaleType="centerCrop"
+                    android:src="@android:drawable/ic_menu_info_details" />
+            </androidx.cardview.widget.CardView>
+
+            <!-- 标题和描述区域 -->
+            <LinearLayout
+                android:id="@+id/contentLL"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <!-- 广告标题行 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_ad_label"
+                        android:layout_width="27dp"
+                        android:layout_height="15dp"
+                        android:background="@drawable/bg_ad_label_gray"
+                        android:gravity="center"
+                        android:text="AD"
+                        android:textColor="#fff"
+                        android:textSize="10sp" />
+
+                    <TextView
+                        android:id="@+id/tv_ad_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:textColor="#333333"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        tools:text="广告标题" />
+                </LinearLayout>
+
+                <!-- 广告描述 -->
+                <TextView
+                    android:id="@+id/tv_ad_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:textColor="#999999"
+                    android:textSize="12sp"
+                    tools:text="广告描述" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- CTA按钮 -->
+        <Button
+            android:id="@+id/btn_ad_cta"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/bg_ad_cta_button"
+            android:gravity="center"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textAllCaps="false"
+            tools:text="INSTALL" />
+
+    </LinearLayout>
+
+    <!-- 广告选项容器(隐私图标) -->
+    <FrameLayout
+        android:id="@+id/fl_ad_options"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

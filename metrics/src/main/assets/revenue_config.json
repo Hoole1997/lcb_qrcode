@@ -1,0 +1,10 @@
+[
+  {
+    "name": "applovin_max_sdk",
+    "rate": 70
+  },
+  {
+    "name": "ironsource_sdk", 
+    "rate": 30
+  }
+]

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">QR Scan &amp; Launcher</string>
+    <string name="home_title_qr">QR</string>
+    <string name="home_title_rest"> Scan &amp; Launcher</string>
+    <string name="home_scan_barcode_subtitle">Scan product barcodes</string>
+    <string name="home_scan_pdf_subtitle">Scan various documents</string>
+    <string name="home_history_subtitle">View your scan history</string>
+    <string name="bill_ad_loading">Loading ad…</string>
+    <string name="settings_chevron">›</string>
+</resources>

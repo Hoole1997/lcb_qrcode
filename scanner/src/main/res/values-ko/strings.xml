@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- QR Code Scan -->
+    <string name="qrcode_scan_title">QR 스캔</string>
+    <string name="barcode_scan_title">바코드 스캔</string>
+    <string name="scanner_pdf_title">PDF 스캔</string>
+    <string name="qrcode_scan_hint">프레임 안에 코드를 맞추세요</string>
+    <string name="qrcode_scan_upload_photo">사진 업로드</string>
+    <string name="qrcode_scan_flashlight">손전등</string>
+    <string name="qrcode_scan_guide_title">스캔 방법</string>
+    <string name="qrcode_scan_guide_step1">카메라를 코드에 맞추세요.</string>
+    <string name="qrcode_scan_guide_step2">파란색 프레임 안에 코드를 맞추세요.</string>
+    <string name="qrcode_scan_guide_step3">바를 드래그하여 확대/축소하세요.</string>
+    <string name="qrcode_scan_guide_step4">코드가 자동으로 스캔됩니다.</string>
+    <string name="qrcode_scan_guide_continue">계속</string>
+    <string name="qrcode_scan_failed_title">QR 코드를 읽을 수 없습니다</string>
+    <string name="qrcode_scan_failed_subtitle">QR 코드를 다시 스캔해 주세요</string>
+    <string name="qrcode_scan_try_again">다시 시도</string>
+    <string name="qrcode_scan_error_title">스캔 오류</string>
+    <string name="qrcode_camera_permission_title">카메라 권한 필요</string>
+    <string name="qrcode_camera_permission_subtitle">QR 코드를 스캔하려면 카메라 권한을 허용해 주세요</string>
+
+    <!-- Scan Result -->
+    <string name="qrcode_result_title">결과</string>
+    <string name="qrcode_result_view_qr">QR 보기</string>
+    <string name="qrcode_result_share">공유</string>
+    <string name="qrcode_result_search_web">웹 검색</string>
+    <string name="qrcode_result_open_url">URL 열기</string>
+    <string name="qrcode_result_copy">복사</string>
+    <string name="qrcode_result_copied">클립보드에 복사됨</string>
+    <string name="qrcode_result_type">스캔 유형</string>
+    <string name="qrcode_action_back">뒤로</string>
+    <string name="qrcode_action_favorite">즐겨찾기</string>
+    <string name="qrcode_action_more">더보기</string>
+    <string name="qrcode_action_ok">확인</string>
+    <string name="qrcode_action_open_with">다른 앱으로 열기</string>
+
+    <!-- Scan History -->
+    <string name="qrcode_history_title">스캔 기록</string>
+    <string name="qrcode_history_tab_all">전체</string>
+    <string name="qrcode_history_tab_qrcode">QR 코드</string>
+    <string name="qrcode_history_tab_url">URL</string>
+    <string name="qrcode_history_tab_document">문서</string>
+    <string name="qrcode_history_empty">스캔 기록이 없습니다</string>
+    <string name="qrcode_history_empty_title">스캔된 QR 코드가 없습니다</string>
+    <string name="qrcode_history_empty_subtitle">\'QR 코드 스캔\'과 \'바코드 스캔\'을 클릭하세요</string>
+    <string name="qrcode_scan_qr_code">QR 코드 스캔</string>
+    <string name="qrcode_scan_barcode">바코드 스캔</string>
+    <string name="qrcode_history_document_empty_title">문서가 없습니다</string>
+    <string name="qrcode_history_document_empty_subtitle">PDF 스캔을 클릭하여 문서를 스캔하세요</string>
+    <string name="qrcode_history_document_scan_pdf">PDF 스캔</string>
+    <string name="qrcode_history_delete_all">모두 삭제</string>
+    <string name="qrcode_history_delete_confirm">모든 기록을 삭제하시겠습니까?</string>
+    <string name="qrcode_history_deleted">기록이 삭제되었습니다</string>
+
+    <!-- Favorites -->
+    <string name="qrcode_favorites_title">즐겨찾기</string>
+    <string name="qrcode_favorites_empty">즐겨찾기가 없습니다</string>
+    <string name="qrcode_favorites_empty_title">즐겨찾기를 추가하지 않았습니다</string>
+    <string name="qrcode_action_add_to_favorites">즐겨찾기에 추가</string>
+    <string name="qrcode_action_remove_from_favorites">즐겨찾기에서 제거</string>
+    <string name="qrcode_action_delete">삭제</string>
+    <string name="qrcode_action_share">공유</string>
+    <string name="qrcode_action_close">닫기</string>
+    <string name="qrcode_added_to_favorites">즐겨찾기에 추가됨</string>
+    <string name="qrcode_removed_from_favorites">즐겨찾기에서 제거됨</string>
+
+    <!-- Settings -->
+    <string name="qrcode_settings_title">설정</string>
+    <string name="qrcode_settings_beep">비프음</string>
+    <string name="qrcode_settings_beep_desc">스캔 성공 시 비프음</string>
+    <string name="qrcode_settings_vibrate">진동</string>
+    <string name="qrcode_settings_vibrate_desc">스캔 시 진동</string>
+    <string name="qrcode_settings_language">앱 언어</string>
+    <string name="qrcode_language_title">언어 선택</string>
+    <string name="qrcode_language_tip">앱 언어를 선택하세요</string>
+    <string name="qrcode_language_confirm">확인</string>
+    <string name="qrcode_settings_lock_screen">잠금 화면</string>
+    <string name="qrcode_settings_lock_screen_desc">잠금 해제 시 잠금 화면 표시</string>
+    <string name="qrcode_settings_rate_us">평가하기</string>
+    <string name="qrcode_settings_rate_us_desc">이 앱을 평가해 주세요</string>
+    <string name="qrcode_settings_share_app">앱 공유</string>
+    <string name="qrcode_settings_share_app_desc">친구와 공유</string>
+    <string name="qrcode_settings_privacy">개인정보 보호정책</string>
+    <string name="qrcode_settings_privacy_desc">개인정보 보호정책 읽기</string>
+
+    <!-- Scan Animation -->
+    <string name="qrcode_tap_to_scan">탭하여 스캔</string>
+
+    <!-- View QR Dialog -->
+    <string name="qrcode_view_qr_download">다운로드</string>
+    <string name="qrcode_view_qr_copy_link">링크 복사</string>
+    <string name="qrcode_view_qr_share">공유</string>
+    <string name="qrcode_view_qr_saved">QR 코드가 갤러리에 저장됨</string>
+    <string name="qrcode_view_qr_save_failed">QR 코드 저장 실패</string>
+
+    <!-- Home -->
+    <string name="qrcode_home_scan_barcode">바코드 스캔</string>
+    <string name="qrcode_home_create_code">코드 생성</string>
+    <string name="qrcode_home_scan_pdf">PDF 스캔</string>
+    <string name="qrcode_home_history">기록</string>
+    <string name="qrcode_home_scanner_title">QR 코드 스캔</string>
+    <string name="qrcode_home_scanner_subtitle">모든 QR 코드를 빠르게 스캔</string>
+
+    <!-- Create Code -->
+    <string name="qrcode_create_title">코드 생성</string>
+    <string name="qrcode_tab_qr_code">QR 코드</string>
+    <string name="qrcode_tab_barcode">바코드</string>
+    <string name="qrcode_create_standard_qr_codes">표준 QR 코드</string>
+    <string name="qrcode_create_standard_barcodes">표준 바코드</string>
+    <string name="qrcode_create_type_website">웹사이트</string>
+    <string name="qrcode_create_type_wifi">WiFi</string>
+    <string name="qrcode_create_type_contact">연락처</string>
+    <string name="qrcode_create_type_phone">전화</string>
+    <string name="qrcode_create_type_email">이메일</string>
+    <string name="qrcode_create_type_my_card">내 카드</string>
+    <string name="qrcode_create_type_text">텍스트</string>
+    <string name="qrcode_create_type_sms">SMS</string>
+    <string name="qrcode_create_type_event">이벤트</string>
+    <string name="qrcode_create_type_location">위치</string>
+    <string name="qrcode_create_type_bookmark">북마크</string>
+    <string name="qrcode_create_type_app">앱</string>
+</resources>

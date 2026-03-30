@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ScanAnimationView">
+        <!-- 是否显示边框 -->
+        <attr name="showCorners" format="boolean" />
+        <!-- 是否显示中心文字 -->
+        <attr name="showCenterText" format="boolean" />
+        <!-- 中心文字内容 -->
+        <attr name="centerText" format="string" />
+        <!-- 扫光渐变高度占View高度的比例 -->
+        <attr name="gradientHeightRatio" format="float" />
+        <!-- 底部实线高度 -->
+        <attr name="solidLineHeight" format="dimension" />
+        <!-- 扫光颜色 -->
+        <attr name="scanLineColor" format="color" />
+        <!-- 边框颜色 -->
+        <attr name="cornerColor" format="color" />
+        <!-- 边框线宽 -->
+        <attr name="cornerStrokeWidth" format="dimension" />
+        <!-- 边框角的长度比例 -->
+        <attr name="cornerLengthRatio" format="float" />
+        <!-- 边框圆角半径 -->
+        <attr name="cornerRadius" format="dimension" />
+        <!-- 动画时长（毫秒） -->
+        <attr name="animationDuration" format="integer" />
+        <!-- 文字大小 -->
+        <attr name="textSize" format="dimension" />
+        <!-- 文字颜色 -->
+        <attr name="textColor" format="color" />
+    </declare-styleable>
+</resources>
