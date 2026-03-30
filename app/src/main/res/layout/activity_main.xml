@@ -100,7 +100,7 @@
                         android:scaleType="centerCrop"
                         android:scaleX="1.06"
                         android:scaleY="1.06"
-                        android:src="@mipmap/ic_home_qr" />
+                        android:src="@mipmap/ic_home_qrcode" />
                 </FrameLayout>
 
                 <TextView

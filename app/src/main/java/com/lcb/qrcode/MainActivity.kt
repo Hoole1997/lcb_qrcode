@@ -3,8 +3,11 @@ package com.lcb.qrcode
 import android.content.Intent
 import android.os.Bundle
 import android.view.ViewGroup
+import android.view.View
+import android.view.animation.OvershootInterpolator
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
+import androidx.core.view.doOnPreDraw
 import androidx.core.view.isVisible
 import androidx.core.view.updateLayoutParams
 import androidx.core.view.WindowInsetsCompat
@@ -19,6 +22,7 @@ import com.lcb.qrcode.databinding.ActivityMainBinding
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
+    private var hasPlayedCardEntrance = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,6 +31,7 @@ class MainActivity : AppCompatActivity() {
 
         applyWindowInsets()
         bindActions()
+        playCardEntranceAnimation()
         loadNativeAd()
     }
 
@@ -62,5 +67,44 @@ class MainActivity : AppCompatActivity() {
             binding.adSection.isVisible = shown
             binding.nativeAdContainer.isVisible = shown
         }
+    }
+
+    private fun playCardEntranceAnimation() {
+        if (hasPlayedCardEntrance) return
+        hasPlayedCardEntrance = true
+
+        val clockwiseCards = listOf(
+            binding.cardQrScan,
+            binding.cardBarcodeScan,
+            binding.cardHistory,
+            binding.cardPdfScan
+        )
+
+        binding.gridContainer.doOnPreDraw {
+            clockwiseCards.forEachIndexed { index, card ->
+                prepareCardForEntrance(card)
+                card.postDelayed(
+                    {
+                        card.animate()
+                            .alpha(1f)
+                            .scaleX(1f)
+                            .scaleY(1f)
+                            .translationY(0f)
+                            .setDuration(460L)
+                            .setInterpolator(OvershootInterpolator(1.05f))
+                            .start()
+                    },
+                    index * 95L
+                )
+            }
+        }
+    }
+
+    private fun prepareCardForEntrance(card: View) {
+        card.animate().cancel()
+        card.alpha = 0f
+        card.scaleX = 0.82f
+        card.scaleY = 0.82f
+        card.translationY = 20f
     }
 }
