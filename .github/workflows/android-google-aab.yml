@@ -25,6 +25,8 @@ jobs:
       KEYSTORE_ALIAS: google
       KEYSTORE_PASSWORD: google123456
       KEY_PASSWORD: google123456
+      GRADLE_JVM_ARGS: -Xmx1536m -XX:MaxMetaspaceSize=512m -XX:+UseParallelGC -Dfile.encoding=UTF-8
+      KOTLIN_DAEMON_JVM_ARGS: -Xmx768m
 
     steps:
       - name: Checkout main
@@ -93,9 +95,17 @@ jobs:
         id: version_info
         run: |
           set -euo pipefail
+          COMMON_GRADLE_ARGS=(
+            -Pandroid.settings.executionProfile=lowMemory
+            "-Dorg.gradle.jvmargs=${GRADLE_JVM_ARGS}"
+            "-Dkotlin.daemon.jvmargs=${KOTLIN_DAEMON_JVM_ARGS}"
+            --max-workers=1
+            --no-parallel
+            --build-cache
+          )
 
-          VERSION_NAME="$(./gradlew -q :app:printGoogleReleaseVersionName --console=plain)"
-          AAB_NAME="$(./gradlew -q :app:printGoogleReleaseAabName --console=plain)"
+          VERSION_NAME="$(./gradlew -q :app:printGoogleReleaseVersionName --console=plain "${COMMON_GRADLE_ARGS[@]}")"
+          AAB_NAME="$(./gradlew -q :app:printGoogleReleaseAabName --console=plain "${COMMON_GRADLE_ARGS[@]}")"
 
           echo "version_name=$VERSION_NAME" >> "$GITHUB_OUTPUT"
           echo "aab_name=$AAB_NAME" >> "$GITHUB_OUTPUT"
@@ -107,7 +117,18 @@ jobs:
           ANDROID_SIGNING_KEY_ALIAS: ${{ env.KEYSTORE_ALIAS }}
           ANDROID_SIGNING_KEY_PASSWORD: ${{ env.KEY_PASSWORD }}
         run: |
+          set -euo pipefail
+          COMMON_GRADLE_ARGS=(
+            -Pandroid.settings.executionProfile=lowMemory
+            "-Dorg.gradle.jvmargs=${GRADLE_JVM_ARGS}"
+            "-Dkotlin.daemon.jvmargs=${KOTLIN_DAEMON_JVM_ARGS}"
+            --max-workers=1
+            --no-parallel
+            --build-cache
+          )
+
           ./gradlew :app:bundleGoogleRelease \
+            "${COMMON_GRADLE_ARGS[@]}" \
             --no-daemon \
             --stacktrace
 
