@@ -9,7 +9,8 @@ plugins {
     id("maven-publish")
 }
 
-val buildConfigFile = rootProject.file("build.config.properties")
+val buildConfigFile = rootProject.file("build.config.local.properties").takeIf { it.exists() }
+    ?: rootProject.file("build.config.properties")
 val buildConfig = Properties()
 if (buildConfigFile.exists()) {
     buildConfig.load(buildConfigFile.inputStream())
