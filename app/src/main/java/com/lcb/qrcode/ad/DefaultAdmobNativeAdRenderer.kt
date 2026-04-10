@@ -14,29 +14,39 @@ import com.lcb.qrcode.R
 /**
  * Admob 原生广告默认渲染器
  */
-class DefaultAdmobNativeAdRenderer : AdmobNativeAdRenderer {
+class DefaultAdmobNativeAdRenderer(
+    private val layoutResId: Int = R.layout.layout_native_ads
+) : AdmobNativeAdRenderer {
 
-    override fun createLayout(context: Context, style: NativeAdStyle): NativeAdView {
+    override fun createLayout(context: Context): NativeAdView {
         return LayoutInflater.from(context)
-            .inflate(style.layoutResId, null) as NativeAdView
+            .inflate(layoutResId, null) as NativeAdView
     }
 
     override fun bindData(adView: NativeAdView, nativeAd: NativeAd) {
         val titleView = adView.findViewById<TextView>(R.id.tv_ad_title)
         val ctaButton = adView.findViewById<TextView>(R.id.btn_ad_cta)
         val iconView = adView.findViewById<ImageView>(R.id.iv_ad_icon)
+        val iconContainer = adView.findViewById<View>(R.id.iconCv)
         val descView = adView.findViewById<TextView>(R.id.tv_ad_description)
 
-        titleView?.text = nativeAd.headline ?: "Test Google Ads"
-        ctaButton?.text = nativeAd.callToAction ?: "INSTALL"
-        descView?.text = nativeAd.body
+        titleView.text = nativeAd.headline
 
-        nativeAd.icon?.let { icon ->
-            iconView?.setImageDrawable(icon.drawable)
-            iconView?.visibility = View.VISIBLE
-        } ?: run {
-            iconView?.setImageResource(android.R.drawable.ic_menu_info_details)
-            iconView?.visibility = View.VISIBLE
+        val body = nativeAd.body
+        descView.text = body
+        descView.visibility = if (body.isNullOrBlank()) View.GONE else View.VISIBLE
+
+        val callToAction = nativeAd.callToAction
+        ctaButton.text = callToAction
+        ctaButton.visibility = if (callToAction.isNullOrBlank()) View.INVISIBLE else View.VISIBLE
+
+        val icon = nativeAd.icon
+        if (icon?.drawable != null) {
+            iconView.setImageDrawable(icon.drawable)
+            iconContainer.visibility = View.VISIBLE
+        } else {
+            iconView.setImageDrawable(null)
+            iconContainer.visibility = View.GONE
         }
 
         adView.headlineView = titleView
@@ -46,7 +56,6 @@ class DefaultAdmobNativeAdRenderer : AdmobNativeAdRenderer {
         adView.advertiserView = null
         adView.priceView = null
         adView.storeView = null
-
         adView.setNativeAd(nativeAd)
     }
 }

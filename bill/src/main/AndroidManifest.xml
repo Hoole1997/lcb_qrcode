@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application>
+        <uses-library android:name="org.apache.http.legacy" android:required="false"/>
+
+        <meta-data android:name="com.google.android.gms.ads.flag.NATIVE_AD_DEBUGGER_ENABLED"
+            android:value="false" />
+
+        <!-- 广告模块内容提供者 -->
+        <provider
+            android:name=".ads.provider.AdModuleProvider"
+            android:authorities="${applicationId}.admodule.provider"
+            android:exported="false" />
+        
+        <activity
+            android:name=".ui.admob.AdmobFullScreenNativeAdActivity"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:theme="@style/Theme.NativeFullScreen" />
+        <activity
+            android:name=".ui.pangle.PangleFullScreenNativeAdActivity"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:theme="@style/Theme.NativeFullScreen" />
+        <activity
+            android:name=".ui.topon.ToponFullScreenNativeAdActivity"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:theme="@style/Theme.NativeFullScreen" />
+    </application>
+
+</manifest>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="bill_ad_loading">광고 로딩 중...</string>
+    <string name="splash_ad_loading">광고가 곧 재생됩니다</string>
+</resources>

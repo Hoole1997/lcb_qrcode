@@ -36,7 +36,7 @@ extra["topon"] = mapOf(
 )
 
 extra["app"] = mapOf(
-    "applicationId" to "com.pdf.reader.viewer.word.sheet.ppt.reader.document",
+    "applicationId" to "com.leafmotivation.quizguessoncolor",
     "compileSdk" to 36,
     "minSdk" to 26,
     "targetSdk" to 35,

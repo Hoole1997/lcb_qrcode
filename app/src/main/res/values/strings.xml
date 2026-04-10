@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name" translatable="false">QR Scan &amp; Launcher</string>
+    <string name="app_name" translatable="false">QR Barcode Scanner</string>
     <string name="home_title_qr" translatable="false">QR</string>
     <string name="home_title_rest" translatable="false"> Scan &amp; Launcher</string>
     <string name="settings_chevron" translatable="false">›</string>

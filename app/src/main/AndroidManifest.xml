@@ -15,6 +15,7 @@
         android:roundIcon="@mipmap/ic_home_qr"
         android:supportsRtl="true"
         android:theme="@style/Theme.LcbQrCode"
+        tools:replace="android:name"
         tools:targetApi="35">
 
         <activity
@@ -31,10 +32,6 @@
             android:name=".MainActivity"
             android:exported="true"
             android:theme="@style/Theme.LcbQrCode">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
 
         <provider
@@ -47,9 +44,6 @@
                 android:resource="@xml/file_paths" />
         </provider>
 
-        <meta-data
-            android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="${ADMOB_APPLICATION_ID}" />
         <meta-data
             android:name="com.google.android.gms.ads.flag.OPTIMIZE_INITIALIZATION"
             android:value="true" />

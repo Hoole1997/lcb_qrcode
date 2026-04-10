@@ -1,0 +1,73 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "da0c97e08c48197d72bdc4baae366707",
+    "entities": [
+      {
+        "tableName": "ad_click_records",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`ad_identifier` TEXT NOT NULL, `click_count` INTEGER NOT NULL, PRIMARY KEY(`ad_identifier`))",
+        "fields": [
+          {
+            "fieldPath": "adIdentifier",
+            "columnName": "ad_identifier",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "clickCount",
+            "columnName": "click_count",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "ad_identifier"
+          ]
+        }
+      },
+      {
+        "tableName": "ad_block_status",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER NOT NULL, `is_blocked` INTEGER NOT NULL, `blocked_date` TEXT NOT NULL, `last_reset_date` TEXT NOT NULL, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "isBlocked",
+            "columnName": "is_blocked",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "blockedDate",
+            "columnName": "blocked_date",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "lastResetDate",
+            "columnName": "last_reset_date",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "id"
+          ]
+        }
+      }
+    ],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'da0c97e08c48197d72bdc4baae366707')"
+    ]
+  }
+}

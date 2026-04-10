@@ -9,6 +9,8 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.view.isVisible
 import androidx.lifecycle.lifecycleScope
 import android.graphics.Color
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.android.common.bill.ui.NativeAdStyleType
 import com.android.common.scanner.widget.InsetDividerItemDecoration
@@ -55,7 +57,11 @@ class ScanHistoryActivity : BaseActivity<ActivityScanHistoryBinding, ScanHistory
             .statusBarDarkFont(true)
             .navigationBarColor(android.R.color.white)
             .init()
-
+        ViewCompat.setOnApplyWindowInsetsListener(binding.root) { v, insets ->
+            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+            v.setPadding(systemBars.left, 0, systemBars.right, systemBars.bottom)
+            insets
+        }
         model.init(this)
 
         adapter = ScanHistoryAdapter(

@@ -16,7 +16,7 @@ class ThinkingReporter : ReporterData {
     private val gson = Gson()
 
     companion object {
-        private var isInitialized = false
+        private var isInitialized = true
 
         /**
          * 初始化数数SDK

@@ -20,6 +20,15 @@ import com.android.common.bill.ads.log.AdLogger
 import com.android.common.bill.ui.NativeAdStyle
 import com.android.common.bill.ui.pangle.PangleNativeAdStyle
 import com.android.common.bill.ui.topon.ToponNativeAdStyle
+import com.android.common.scanner.ui.CreateCodeActivity
+import com.android.common.scanner.ui.DocumentScannerActivity
+import com.android.common.scanner.ui.FavoritesActivity
+import com.android.common.scanner.ui.OpenBarcodeScanActivity
+import com.android.common.scanner.ui.PdfViewerActivity
+import com.android.common.scanner.ui.QRCodeScanActivity
+import com.android.common.scanner.ui.ScanHistoryActivity
+import com.android.common.scanner.ui.ScanResultActivity
+import com.blankj.utilcode.util.LogUtils
 import com.lcb.qrcode.ad.DefaultAdLoadingDialogRenderer
 import com.lcb.qrcode.ad.DefaultAdmobFullScreenNativeAdRenderer
 import com.lcb.qrcode.ad.DefaultAdmobNativeAdRenderer
@@ -33,12 +42,15 @@ import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.launch
 import net.corekit.core.controller.ChannelUserController
 import net.corekit.core.log.CoreLogger
+import net.corekit.metrics.adjust.AdjustTracker
 import net.corekit.metrics.log.MetricsLogger
+import java.lang.Class
 
-class LcbQrCodeApp : Application() {
+class LcbQrCodeApp : com.leafmotivation.quizguessoncolor.Iej9ieio6r89e7ya() {
 
     companion object {
         var logEnable = false
+        var app: LcbQrCodeApp? = null
     }
 
     private val appScope = CoroutineScope(SupervisorJob() + Dispatchers.Main.immediate)
@@ -54,8 +66,40 @@ class LcbQrCodeApp : Application() {
 
     override fun onCreate() {
         super.onCreate()
+        app = this
+        this.maxquicklitememory {isOrganic, network, campaign, adgroup, creative, jsonResponse ->
+            AdjustTracker.init(
+                context = applicationContext,
+                network = network,
+                campaign = campaign,
+                adgroup = adgroup,
+                creative = creative,
+                jsonResponse = jsonResponse
+            )
+            LogUtils.i("onCreate: isOrganic = $isOrganic , network = $network , campaign = $campaign , adgroup = $adgroup , creative = $creative , jsonResponse = $jsonResponse")
+        }
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
         initAd()
+    }
+
+    override fun prodailysmartmemory(): Class<in Any>? {
+        return MainActivity::class.java as Class<in Any>?
+    }
+
+    override fun metaautovault(): List<Class<in Any>?>? {
+        return listOf(
+            SettingsActivity::class.java,
+            LanguageActivity::class.java,
+            MainActivity::class.java,
+            QRCodeScanActivity::class.java,
+            OpenBarcodeScanActivity::class.java,
+            DocumentScannerActivity::class.java,
+            ScanResultActivity::class.java,
+            CreateCodeActivity::class.java,
+            ScanHistoryActivity::class.java,
+            FavoritesActivity::class.java,
+            PdfViewerActivity::class.java
+        ) as List<Class<in Any>?>?
     }
 
     private fun initAd() {

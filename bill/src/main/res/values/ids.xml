@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- IDs referenced by external modules (e.g., shortvideo, clap) -->
+    <item name="content_container" type="id" />
+    <item name="tv_ad_title" type="id" />
+    <item name="tv_ad_description" type="id" />
+    <item name="iconCv" type="id" />
+</resources>

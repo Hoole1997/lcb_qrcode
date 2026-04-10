@@ -50,7 +50,8 @@ android {
 }
 
 dependencies {
-    compileOnly(libs.remax.core)
+    compileOnly(project(":core"))
+
     implementation(libs.androidx.core.ktx)
     implementation(platform(libs.firebase.bom))
     implementation(libs.firebase.analytics)

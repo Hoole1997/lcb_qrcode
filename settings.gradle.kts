@@ -34,6 +34,7 @@ dependencyResolutionManagement {
                     ?: ""
             }
         }
+        maven("https://repo.dgtverse.cn/repository/maven-public")
     }
 }
 
@@ -42,3 +43,5 @@ rootProject.name = "lcb_qrcode"
 include(":app")
 include(":scanner")
 include(":metrics")
+include(":bill")
+include(":core")

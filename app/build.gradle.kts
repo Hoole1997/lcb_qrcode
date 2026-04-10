@@ -23,6 +23,25 @@ fun Map<String, Any?>.intValue(name: String, default: Int): Int = when (val valu
     else -> default
 }
 
+fun secretValue(name: String): String =
+    (findProperty(name) as? String).orEmpty().ifBlank {
+        System.getenv(name).orEmpty()
+    }
+
+fun resolveSigningFile(path: String): File {
+    val configuredFile = File(path)
+    if (configuredFile.isAbsolute) {
+        return configuredFile
+    }
+
+    val rootRelativeFile = rootProject.file(path)
+    if (rootRelativeFile.exists()) {
+        return rootRelativeFile
+    }
+
+    return file(path.removePrefix("app/"))
+}
+
 val appConfig = configMap("app")
 val analyticsConfig = configMap("analytics")
 val adMobConfig = configMap("admob")
@@ -31,6 +50,29 @@ val pangleConfig = configMap("pangle")
 val pangleUnitConfig = pangleConfig.nestedMap("adUnitIds")
 val toponConfig = configMap("topon")
 val toponUnitConfig = toponConfig.nestedMap("adUnitIds")
+val resolvedVersionName = appConfig.stringValue("versionName").ifBlank { "1.0.0" }
+val googleReleaseKeystorePath = secretValue("ANDROID_SIGNING_STORE_FILE").ifBlank {
+    "app/src/google/google-release.keystore"
+}
+val googleReleaseKeystoreFile = resolveSigningFile(googleReleaseKeystorePath)
+val googleReleaseStorePassword = secretValue("ANDROID_SIGNING_STORE_PASSWORD").ifBlank {
+    "google123456"
+}
+val googleReleaseKeyAlias = secretValue("ANDROID_SIGNING_KEY_ALIAS").ifBlank {
+    "google"
+}
+val googleReleaseKeyPassword = secretValue("ANDROID_SIGNING_KEY_PASSWORD").ifBlank {
+    "google123456"
+}
+val hasGoogleReleaseSigning = googleReleaseKeystoreFile.isFile &&
+    googleReleaseKeystoreFile.length() > 0L &&
+    googleReleaseStorePassword.isNotBlank() &&
+    googleReleaseKeyAlias.isNotBlank() &&
+    googleReleaseKeyPassword.isNotBlank()
+val requiresGoogleReleaseSigning = gradle.startParameter.taskNames.any {
+    it.contains("google", ignoreCase = true) && it.contains("release", ignoreCase = true)
+}
+val googleReleaseAabName = "lcb_qrcode_release_${resolvedVersionName}.aab"
 
 android {
     namespace = "com.lcb.qrcode"
@@ -41,7 +83,7 @@ android {
         minSdk = appConfig.intValue("minSdk", 26)
         targetSdk = appConfig.intValue("targetSdk", 35)
         versionCode = appConfig.intValue("versionCode", 1)
-        versionName = appConfig.stringValue("versionName").ifBlank { "1.0.0" }
+        versionName = resolvedVersionName
 
         manifestPlaceholders["ADMOB_APPLICATION_ID"] = adMobConfig.stringValue("applicationId")
 
@@ -86,6 +128,17 @@ android {
         }
     }
 
+    signingConfigs {
+        create("googleRelease") {
+            if (hasGoogleReleaseSigning) {
+                storeFile = googleReleaseKeystoreFile
+                storePassword = googleReleaseStorePassword
+                keyAlias = googleReleaseKeyAlias
+                keyPassword = googleReleaseKeyPassword
+            }
+        }
+    }
+
     buildFeatures {
         buildConfig = true
         viewBinding = true
@@ -93,7 +146,22 @@ android {
 
     buildTypes {
         release {
+            isMinifyEnabled = true
+            isShrinkResources = false
+            if (hasGoogleReleaseSigning || requiresGoogleReleaseSigning) {
+                signingConfig = signingConfigs.getByName("googleRelease")
+            }
+            check(hasGoogleReleaseSigning || !requiresGoogleReleaseSigning) {
+                "Missing google release signing config. Ensure app/src/google/google-release.keystore exists or set ANDROID_SIGNING_STORE_FILE, ANDROID_SIGNING_STORE_PASSWORD, ANDROID_SIGNING_KEY_ALIAS, and ANDROID_SIGNING_KEY_PASSWORD."
+            }
+            proguardFiles(
+                getDefaultProguardFile("proguard-android-optimize.txt"),
+                "proguard-rules.pro",
+            )
+        }
+        debug {
             isMinifyEnabled = false
+            isShrinkResources = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro",
@@ -120,11 +188,27 @@ android {
     }
 }
 
+tasks.register("printGoogleReleaseVersionName") {
+    group = "help"
+    description = "Prints the versionName used for google release builds."
+    doLast {
+        println(resolvedVersionName)
+    }
+}
+
+tasks.register("printGoogleReleaseAabName") {
+    group = "help"
+    description = "Prints the expected output file name for google release AAB builds."
+    doLast {
+        println(googleReleaseAabName)
+    }
+}
+
 dependencies {
     implementation(project(":scanner"))
     implementation(project(":metrics"))
-    implementation(libs.remax.core)
-    implementation(libs.remax.bill)
+    implementation(project(":core"))
+    implementation(project(":bill"))
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)

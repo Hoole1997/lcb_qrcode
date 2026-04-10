@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.ViewGroup
 import android.view.View
 import android.view.animation.OvershootInterpolator
+import androidx.activity.OnBackPressedCallback
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.doOnPreDraw
@@ -17,16 +18,16 @@ import com.android.common.scanner.ui.OpenBarcodeScanActivity
 import com.android.common.scanner.ui.QRCodeScanActivity
 import com.android.common.scanner.ui.ScanHistoryActivity
 import com.android.common.scanner.util.loadNative
-import com.lcb.qrcode.databinding.ActivityMainBinding
+import com.lcb.qrcode.databinding.ActivityMainHomeBinding
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityMainBinding
+    private lateinit var binding: ActivityMainHomeBinding
     private var hasPlayedCardEntrance = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityMainBinding.inflate(layoutInflater)
+        binding = ActivityMainHomeBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         applyWindowInsets()
@@ -48,15 +49,18 @@ class MainActivity : AppCompatActivity() {
         cardPdfScan.setOnClickListener { DocumentScannerActivity.start(this@MainActivity) }
         cardHistory.setOnClickListener { ScanHistoryActivity.start(this@MainActivity) }
         btnSettings.setOnClickListener { SettingsActivity.start(this@MainActivity) }
+        onBackPressedDispatcher.addCallback(this@MainActivity,object : OnBackPressedCallback(true) {
+            override fun handleOnBackPressed() {
+                LcbQrCodeApp.app?.smartbackuptoolsignal()
+            }
+        })
     }
 
     private fun applyWindowInsets() {
         val baseTopMargin = (binding.headerContainer.layoutParams as ViewGroup.MarginLayoutParams).topMargin
-        ViewCompat.setOnApplyWindowInsetsListener(binding.root) { _, insets ->
-            val statusBarInsets = insets.getInsets(WindowInsetsCompat.Type.statusBars())
-            binding.headerContainer.updateLayoutParams<ViewGroup.MarginLayoutParams> {
-                topMargin = baseTopMargin + statusBarInsets.top
-            }
+        ViewCompat.setOnApplyWindowInsetsListener(binding.root) { v, insets ->
+            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
         ViewCompat.requestApplyInsets(binding.root)

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <application>
+        <!-- CoreModuleProvider 最高优先级，提供 Context -->
+        <provider
+            android:name=".provider.CoreModuleProvider"
+            android:authorities="${applicationId}.core.provider"
+            android:exported="false"
+            android:initOrder="110" />
+
+    </application>
+
+</manifest>

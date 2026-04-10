@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="bill_ad_loading">廣告載入中...</string>
+    <string name="splash_ad_loading">廣告即將播放</string>
+</resources>

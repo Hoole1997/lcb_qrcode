@@ -1,29 +1,29 @@
 {
-    "project_info": {
-        "project_number": "556354645204",
-        "project_id": "qr-scanner-barcode-reade-e6452",
-        "storage_bucket": "qr-scanner-barcode-reade-e6452.firebasestorage.app"
-    },
-    "client": [
-        {
-            "client_info": {
-                "mobilesdk_app_id": "1:556354645204:android:0a24cdd2debaa449bc5f41",
-                "android_client_info": {
-                    "package_name": "com.qr.scanner.barcode.reader.app.tool"
-                }
-            },
-            "oauth_client": [],
-            "api_key": [
-                {
-                    "current_key": "AIzaSyD-PhMpDVkXqNN_5-wH1qouRMgDEBv-dok"
-                }
-            ],
-            "services": {
-                "appinvite_service": {
-                    "other_platform_oauth_client": []
-                }
-            }
+  "project_info": {
+    "project_number": "732555980920",
+    "project_id": "agbc0345f114-ac340-gp",
+    "storage_bucket": "agbc0345f114-ac340-gp.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:732555980920:android:722d6b386334ba19d5bd8d",
+        "android_client_info": {
+          "package_name": "com.qr.code.reader.barcode.scan.tool"
         }
-    ],
-    "configuration_version": "1"
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDigm2rOB60UzRCBp05YU4IBiL7RRNJUko"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
 }

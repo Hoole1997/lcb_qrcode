@@ -40,8 +40,9 @@ android {
 }
 
 dependencies {
-    api(libs.remax.core)
-    api(libs.remax.bill)
+
+    api(project(":core"))
+    api(project(":bill"))
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
