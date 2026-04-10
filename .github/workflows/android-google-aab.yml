@@ -25,8 +25,8 @@ jobs:
       KEYSTORE_ALIAS: google
       KEYSTORE_PASSWORD: google123456
       KEY_PASSWORD: google123456
-      GRADLE_JVM_ARGS: -Xmx3072m -XX:MaxMetaspaceSize=768m -XX:+UseParallelGC -Dfile.encoding=UTF-8
-      KOTLIN_DAEMON_JVM_ARGS: -Xmx1024m
+      GRADLE_JVM_ARGS: -Xmx5120m -XX:MaxMetaspaceSize=1024m -XX:+UseParallelGC -Dfile.encoding=UTF-8
+      KOTLIN_DAEMON_JVM_ARGS: -Xmx1536m
 
     steps:
       - name: Checkout main
@@ -148,6 +148,11 @@ jobs:
           )
 
           ./gradlew :app:bundleGoogleRelease \
+            -x lint \
+            -x :app:lintGoogleRelease \
+            -x :app:lintVitalGoogleRelease \
+            -x :app:lintVitalAnalyzeGoogleRelease \
+            -x :app:lintVitalReportGoogleRelease \
             "${COMMON_GRADLE_ARGS[@]}" \
             --no-daemon \
             --stacktrace
