@@ -25,8 +25,8 @@ jobs:
       KEYSTORE_ALIAS: google
       KEYSTORE_PASSWORD: google123456
       KEY_PASSWORD: google123456
-      GRADLE_JVM_ARGS: -Xmx1536m -XX:MaxMetaspaceSize=512m -XX:+UseParallelGC -Dfile.encoding=UTF-8
-      KOTLIN_DAEMON_JVM_ARGS: -Xmx768m
+      GRADLE_JVM_ARGS: -Xmx3072m -XX:MaxMetaspaceSize=768m -XX:+UseParallelGC -Dfile.encoding=UTF-8
+      KOTLIN_DAEMON_JVM_ARGS: -Xmx1024m
 
     steps:
       - name: Checkout main
@@ -91,12 +91,33 @@ jobs:
       - name: Grant Gradle wrapper permission
         run: chmod +x ./gradlew
 
+      - name: Print runner diagnostics
+        run: |
+          set -euo pipefail
+          echo "Runner OS: $RUNNER_OS"
+          echo "Runner Arch: $RUNNER_ARCH"
+          echo "CPU:"
+          nproc || true
+          echo "Memory:"
+          free -h || true
+          echo "Meminfo:"
+          grep -E 'MemTotal|MemFree|MemAvailable|SwapTotal|SwapFree' /proc/meminfo || true
+          echo "Disk:"
+          df -h || true
+          echo "Ulimit:"
+          ulimit -a || true
+          echo "Java:"
+          java -version
+          echo "Java VM settings:"
+          java -XshowSettings:vm -version 2>&1 | sed -n '1,80p'
+          echo "Gradle JVM args: ${GRADLE_JVM_ARGS}"
+          echo "Kotlin daemon JVM args: ${KOTLIN_DAEMON_JVM_ARGS}"
+
       - name: Resolve version info
         id: version_info
         run: |
           set -euo pipefail
           COMMON_GRADLE_ARGS=(
-            -Pandroid.settings.executionProfile=lowMemory
             "-Dorg.gradle.jvmargs=${GRADLE_JVM_ARGS}"
             "-Dkotlin.daemon.jvmargs=${KOTLIN_DAEMON_JVM_ARGS}"
             --max-workers=1
@@ -119,7 +140,6 @@ jobs:
         run: |
           set -euo pipefail
           COMMON_GRADLE_ARGS=(
-            -Pandroid.settings.executionProfile=lowMemory
             "-Dorg.gradle.jvmargs=${GRADLE_JVM_ARGS}"
             "-Dkotlin.daemon.jvmargs=${KOTLIN_DAEMON_JVM_ARGS}"
             --max-workers=1
